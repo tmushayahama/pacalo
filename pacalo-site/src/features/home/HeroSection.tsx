@@ -2,10 +2,10 @@ import type React from 'react'
 import { HeroSection as Hero, HighlightText } from './components/HeroComponents'
 
 const HeroSection: React.FC = () => (
-  <div className="mt-16 md:mt-0">
+  <div className="mt-20 md:mt-0">
     <Hero
-      mobileImage="/assets/images/mobile_background.jpg"
-      desktopImage="/assets/images/homepage_photo.jpg"
+      mobileImage="/assets/images/homepage-bg-sm.jpg"
+      desktopImage="/assets/images/homepage-bg.jpg"
       title={
         <>
           We proudly offer top-tier <HighlightText>stretcher</HighlightText>,{' '}

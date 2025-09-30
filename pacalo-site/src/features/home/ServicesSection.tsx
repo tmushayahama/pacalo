@@ -21,10 +21,20 @@ const ServicesSection: React.FC = () => {
   ]
 
   return (
-    <section id="services" className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-12 text-center">Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section id="services" className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-white/60"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-100/30 to-transparent rounded-full -translate-y-48 translate-x-48"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-pacalo-gold/20 to-transparent rounded-full translate-y-48 -translate-x-48"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-gradient-to-r from-pacalo-blue to-blue-600 bg-clip-text mb-4">
+            Services
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-pacalo-blue to-pacalo-gold mx-auto rounded-full"></div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <ServiceCard key={index} {...service} />
           ))}

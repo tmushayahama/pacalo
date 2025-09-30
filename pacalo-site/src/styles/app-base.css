@@ -20,6 +20,7 @@ html {
     Helvetica Neue,
     Arial,
     sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
