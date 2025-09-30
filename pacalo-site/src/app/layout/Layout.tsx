@@ -245,7 +245,7 @@ const Layout: React.FC = () => {
               to="/"
               className='no-underline text-gray-600 text-xl md:text-2xl'
             >
-              <strong>Tiny Skills:</strong> Self Care
+              <strong>Pacalo</strong>
             </Link>
             {!isMobile && (
               <div className="flex-1 max-w-md ml-8">
