@@ -12,7 +12,7 @@ import CertificationsSection from '../features/home/CertificationsSection'
 
 const Home: React.FC = () => {
   return (
-    <div className="font-roboto bg-white">
+    <div className="font-roboto bg-white overflow-x-hidden">
       <Navigation />
       <HeroSection />
       <ContactRow />

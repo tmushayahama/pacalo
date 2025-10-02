@@ -1,71 +1,66 @@
 import type React from 'react'
 import { FaPhone, FaEnvelope, FaClock } from 'react-icons/fa'
-import { ContactItem, ContactSection, AboutContent } from './components/ContactComponents'
+import { ContactItem } from './components/ContactComponents'
 
 const AboutUsSectionNew: React.FC = () => {
   return (
-    <section
-      id="about-us"
-      className="py-20 bg-gradient-to-br from-pacalo-dark-blue via-blue-900 to-pacalo-dark-blue relative overflow-hidden"
-    >
-      {/* Background decoration */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-pacalo-gold/10 to-transparent rounded-full -translate-y-48 translate-x-48"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-400/10 to-transparent rounded-full translate-y-48 -translate-x-48"></div>
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
+    <section id="about-us" className="py-16 bg-gray-900 text-white">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* About Us Content - Left Side */}
           <div className="lg:col-span-2">
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20">
-              <AboutContent title="About Us">
-                <div className="space-y-6 text-lg leading-relaxed">
-                  <p>
-                    <strong className="text-pacalo-gold">PACALO</strong> Transportation specializes in non-emergency medical transport, hospital
-                    releases and more. We cover Mclean County and the rest of Central Illinois, providing door to door
-                    service with no shared rides. As a Fully covered and certified Illinois medical provider, we serve
-                    different clients including Medicaid, Private Insurance & Private pay.
-                  </p>
-                  <p>
-                    If you or someone you love needs reliable transportation, we can help! Whether you need rides for routine scheduled appointments,
-                    one time visits, events, fun casual trips, we can get you there safely.
-                  </p>
-                  <p className="text-pacalo-gold font-semibold">
-                    <strong>Call us for a peace of mind!</strong>
-                  </p>
-                </div>
-              </AboutContent>
+            <div className="bg-white/10 rounded-lg p-8">
+              <div className="mb-8">
+                <h2 className="text-4xl font-bold text-white mb-4">About Us</h2>
+                <div className="w-20 h-1 bg-pacalo-gold rounded-full"></div>
+              </div>
+
+              <div className="space-y-6 text-lg leading-relaxed">
+                <p>
+                  <strong className="text-pacalo-gold">PACALO Transportation</strong> specializes in non-emergency medical transport, hospital releases and more. We cover McLean County and Central Illinois, providing door-to-door service with no shared rides.
+                </p>
+                <p>
+                  As a fully covered and certified Illinois medical provider, we serve different clients including Medicaid, Private Insurance & Private pay.
+                </p>
+                <p>
+                  If you or someone you love needs reliable transportation, we can help! Whether you need rides for routine appointments, one-time visits, or events, we can get you there safely.
+                </p>
+                <p className="text-pacalo-gold font-bold text-xl">
+                  Call us for peace of mind!
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* Work with us - Right Side */}
+          {/* Contact Information - Right Side */}
           <div className="lg:col-span-1">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/20 h-full">
-              <ContactSection
-                title="Work with us"
-                description="Questions on availability, rates, schedule? Send us a quick note or give us a call, we will promptly respond."
-              >
-                <div className="space-y-6">
-                  <ContactItem
-                    icon={<FaPhone />}
-                    href="tel:3093074564"
-                  >
-                    (309) 307 4564
-                  </ContactItem>
+            <div className="bg-white/5 rounded-lg p-6">
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold text-white mb-4">Contact Us</h2>
+                <p className="text-gray-300">
+                  Questions about availability, rates, or scheduling? Send us a note or give us a call.
+                </p>
+              </div>
 
-                  <ContactItem
-                    icon={<FaEnvelope />}
-                    href="mailto:ride@pacalo.net"
-                  >
-                    ride@pacalo.net
-                  </ContactItem>
+              <div className="space-y-6">
+                <ContactItem icon={<FaPhone />} href="tel:3093074564">
+                  <span className="block text-sm text-gray-300 mb-1">Call Us Anytime</span>
+                  <span className="text-lg font-bold">(309) 307-4564</span>
+                </ContactItem>
 
+                <ContactItem icon={<FaEnvelope />} href="mailto:ride@pacalo.net">
+                  <span className="block text-sm text-gray-300 mb-1">Email Us</span>
+                  <span className="text-lg font-bold break-all">ride@pacalo.net</span>
+                </ContactItem>
+
+                <div className="bg-white/10 rounded-lg p-4">
                   <ContactItem icon={<FaClock />}>
-                    We are open Mon-Sun (24 Hours)
+                    <span className="block text-sm text-gray-300 mb-1">Service Hours</span>
+                    <span className="text-lg font-bold text-pacalo-gold">24/7 Available</span>
+                    <span className="text-sm text-gray-400 block">Monday - Sunday</span>
                   </ContactItem>
                 </div>
-              </ContactSection>
+              </div>
             </div>
           </div>
         </div>

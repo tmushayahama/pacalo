@@ -2,7 +2,7 @@ import type React from 'react'
 import { HeroSection as Hero, HighlightText } from './components/HeroComponents'
 
 const HeroSection: React.FC = () => (
-  <div className="mt-20 md:mt-0">
+  <div className="mt-16 md:mt-0">
     <Hero
       mobileImage="/assets/images/homepage-bg-sm.jpg"
       desktopImage="/assets/images/homepage-bg.jpg"
