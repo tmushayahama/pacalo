@@ -8,7 +8,7 @@ const CertificationsSection: React.FC = () => {
       className: "h-20 w-auto",
       content: (
         <p className="leading-relaxed">
-          We are a certified <strong>IDHS Non–Emergency Medical Transportation (NEMT) Service Provider</strong>, essential for serving clients in state–supported programs. This certification ensures we meet all state requirements for compliance and quality care.
+          We are a certified <strong>IDHS Non-Emergency Medical Transportation (NEMT) Service Provider</strong>, essential for serving clients in state-supported programs. This certification ensures we meet all state requirements for compliance and quality care.
         </p>
       )
     },
@@ -18,7 +18,7 @@ const CertificationsSection: React.FC = () => {
       className: "h-20 w-20",
       content: (
         <p className="leading-relaxed">
-          Our team is <strong>CPR–qualified</strong> to ensure the highest standard of patient care and immediate response during every transport. We provide professional, comfortable, and safe transportation.
+          Our team is <strong>CPR-qualified</strong> to ensure the highest standard of patient care and immediate response during every transport. We provide professional, comfortable, and safe transportation.
         </p>
       )
     },
@@ -28,7 +28,7 @@ const CertificationsSection: React.FC = () => {
       className: "h-20 w-20",
       content: (
         <p className="leading-relaxed">
-          Our team includes <strong>highly trained EMTs (Emergency Medical Technicians)</strong> skilled in administering oxygen and life–saving medications, ensuring expert care throughout your journey.
+          Our team includes <strong>highly trained EMTs (Emergency Medical Technicians)</strong> skilled in administering oxygen and life-saving medications, ensuring expert care throughout your journey.
         </p>
       )
     },
