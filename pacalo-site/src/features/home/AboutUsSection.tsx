@@ -1,6 +1,5 @@
 import type React from 'react'
 import { FaPhone, FaEnvelope, FaClock } from 'react-icons/fa'
-import { ContactItem } from './components/ContactComponents'
 
 const AboutUsSectionNew: React.FC = () => {
   return (
@@ -43,22 +42,43 @@ const AboutUsSectionNew: React.FC = () => {
               </div>
 
               <div className="space-y-6">
-                <ContactItem icon={<FaPhone />} href="tel:3093074564">
-                  <span className="block text-sm text-gray-300 mb-1">Call Us Anytime</span>
-                  <span className="text-lg font-bold">(309) 307-4564</span>
-                </ContactItem>
+                <a
+                  href="tel:3093074564"
+                  className="flex items-center space-x-3 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
+                >
+                  <div className="text-pacalo-gold text-2xl flex-shrink-0">
+                    <FaPhone />
+                  </div>
+                  <div>
+                    <span className="block text-sm text-gray-300 mb-1">Call Us Anytime</span>
+                    <span className="text-lg font-bold">(309) 307-4564</span>
+                  </div>
+                </a>
 
-                <ContactItem icon={<FaEnvelope />} href="mailto:ride@pacalo.net">
-                  <span className="block text-sm text-gray-300 mb-1">Email Us</span>
-                  <span className="text-lg font-bold break-all">ride@pacalo.net</span>
-                </ContactItem>
+                <a
+                  href="mailto:ride@pacalo.net"
+                  className="flex items-center space-x-3 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
+                >
+                  <div className="text-pacalo-gold text-2xl flex-shrink-0">
+                    <FaEnvelope />
+                  </div>
+                  <div>
+                    <span className="block text-sm text-gray-300 mb-1">Email Us</span>
+                    <span className="text-lg font-bold break-all">ride@pacalo.net</span>
+                  </div>
+                </a>
 
                 <div className="bg-white/10 rounded-lg p-4">
-                  <ContactItem icon={<FaClock />}>
-                    <span className="block text-sm text-gray-300 mb-1">Service Hours</span>
-                    <span className="text-lg font-bold text-pacalo-gold">24/7 Available</span>
-                    <span className="text-sm text-gray-400 block">Monday - Sunday</span>
-                  </ContactItem>
+                  <div className="flex items-center space-x-3 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
+                    <div className="text-pacalo-gold text-2xl flex-shrink-0">
+                      <FaClock />
+                    </div>
+                    <div>
+                      <span className="block text-sm text-gray-300 mb-1">Service Hours</span>
+                      <span className="text-lg font-bold text-pacalo-gold">24/7 Available</span>
+                      <span className="text-sm text-gray-400 block">Monday - Sunday</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
