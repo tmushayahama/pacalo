@@ -15,7 +15,11 @@ interface FormData {
   notes: string;
 }
 
-const BookingForm: React.FC = () => {
+type BookingFormProps = {
+  compact?: boolean
+}
+
+const BookingForm: React.FC<BookingFormProps> = ({ compact = false }) => {
   const { control, handleSubmit, formState: { errors } } = useForm<FormData>({
     defaultValues: {
       name: '',
@@ -52,10 +56,10 @@ const BookingForm: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-12 px-4">
-      <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-8">
-        <div className="mb-6">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Request a Ride</h1>
+    <div className={compact ? 'py-0 px-0' : 'min-h-screen bg-gradient-to-b from-blue-50 to-white py-12 px-4'}>
+      <div className={compact ? 'w-full bg-white/95 backdrop-blur-md rounded-2xl shadow-xl ring-1 ring-gray-200 p-6 md:p-8' : 'max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-8'}>
+        <div className={compact ? 'mb-4' : 'mb-6'}>
+          <h1 className={compact ? 'text-2xl md:text-3xl font-bold text-gray-900 mb-1' : 'text-3xl font-bold text-gray-900 mb-2'}>Request a Ride</h1>
           <p className="text-gray-600">We'll contact you shortly to confirm details</p>
         </div>
 

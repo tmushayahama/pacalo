@@ -88,29 +88,6 @@ const FAQ: React.FC<FAQProps> = ({ faqData }) => {
             </div>
           ))}
         </div>
-
-        <div className="mt-12 bg-pacalo-blue rounded-lg p-8 text-center text-white">
-          <h3 className="text-2xl font-bold mb-4">Still have questions?</h3>
-          <p className="text-lg mb-6">
-            Our team is here to help 24/7. Give us a call or send us an email.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:3093074564"
-              className="inline-flex items-center justify-center px-6 py-3 bg-pacalo-gold text-pacalo-blue font-bold rounded-lg hover:bg-yellow-500 transition-colors"
-            >
-              <FaPhone className="mr-2" />
-              Call (309) 307-4564
-            </a>
-            <a
-              href="mailto:ride@pacalo.net"
-              className="inline-flex items-center justify-center px-6 py-3 bg-white text-pacalo-blue font-bold rounded-lg hover:bg-gray-100 transition-colors"
-            >
-              <FaEnvelope className="mr-2" />
-              Email Us
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );
