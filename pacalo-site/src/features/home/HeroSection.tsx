@@ -21,14 +21,14 @@ const HeroSection: React.FC = () => (
       className="min-h-[60vh] md:min-h-[70vh] bg-cover bg-center relative flex items-center"
       style={{
         backgroundImage: window.innerWidth >= 768
-          ? `url('/assets/images/homepage-bg.jpg')`
-          : `url('/assets/images/homepage-bg-sm.jpg')`
+          ? `url('/assets/images/homepage-bg.png')`
+          : `url('/assets/images/homepage-bg-sm.png')`
       }}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/45 to-black/30" />
 
-      <div className="relative z-10 w-full container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl">
+      <div className="relative z-10 w-full container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col">
+        <div className="max-w-4xl  ">
           <div className="bg-white/90 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-2xl border border-white/20">
             <h1 className="text-gray-900 font-bold text-xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight mb-4">
               We proudly offer top-tier <HighlightText>stretcher</HighlightText>,{' '}
@@ -65,12 +65,15 @@ const HeroSection: React.FC = () => (
             </div>
           </div>
         </div>
+        <div className="mt-6 opacity-70">
+          <CertificationsStrip />
+        </div>
       </div>
     </div>
 
-    <CertificationsStrip />
     <BookingBarForm />
   </div>
 )
+
 
 export default HeroSection
