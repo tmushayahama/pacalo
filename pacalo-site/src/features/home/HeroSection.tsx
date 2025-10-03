@@ -1,5 +1,5 @@
 import type React from 'react'
-import { FaPhone } from 'react-icons/fa'
+import { FaEnvelope, FaPhone } from 'react-icons/fa'
 import BookingBarForm from './components/BookingBarForm'
 import CertificationsStrip from './components/CertificationsStrip'
 interface HighlightTextProps {
@@ -29,7 +29,7 @@ const HeroSection: React.FC = () => (
 
       <div className="relative z-10 h-full min-h-[60vh] md:min-h-[75vh] container mx-auto px-4 flex items-end md:items-center pb-8 md:pb-0">
         <div className="w-full md:max-w-4xl">
-          <div className="bg-white/95 md:bg-white/90 backdrop-blur-sm rounded-lg p-4 md:p-8 lg:p-10 shadow-lg">
+          <div className="bg-white/45 md:bg-white/50 backdrop-blur-sm rounded-lg p-4 md:p-8 lg:p-10 shadow-lg">
             <h1 className="text-gray-900 font-bold text-xl md:text-4xl lg:text-5xl leading-tight mb-3 md:mb-4">
               We proudly offer top-tier <HighlightText>stretcher</HighlightText>,{' '}
               <HighlightText>wheelchair</HighlightText>, and{' '}
@@ -44,9 +44,21 @@ const HeroSection: React.FC = () => (
                 href="tel:3093074564"
                 className="flex md:inline-flex items-center justify-center px-4 md:px-6 py-3 bg-pacalo-blue text-white font-bold rounded-lg hover:bg-blue-700 transition-colors"
               >
-                <FaPhone className="w-4 md:w-5 h-4 md:h-5 mr-2" />
+                <div className="text-pacalo-gold text-2xl flex-shrink-0">
+                  <FaPhone className="w-4 md:w-5 h-4 md:h-5 mr-2" />
+                </div>
                 <span className="md:hidden">Call Now</span>
                 <span className="hidden md:inline">Call (309) 307-4564</span>
+              </a>
+              <a
+                href="mailto:ride@pacalo.net"
+                className="flex md:inline-flex items-center justify-center px-4 md:px-6 py-3 bg-pacalo-blue text-white font-bold rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                <div className="text-pacalo-gold text-2xl flex-shrink-0">
+                  <FaEnvelope className="w-4 md:w-5 h-4 md:h-5 mr-2" />
+                </div>
+                <span className="md:hidden">Email Us</span>
+                <span className="hidden md:inline">Email ride@pacalo.net</span>
               </a>
               <a
                 href="#services"

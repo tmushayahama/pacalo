@@ -4,54 +4,60 @@ import { FaPhone, FaEnvelope, FaClock } from 'react-icons/fa'
 const ContactRow: React.FC = () => {
   return (
     <div className="w-full bg-pacalo-blue text-white">
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      <div className="container mx-auto px-4 py-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
           {/* Phone Card */}
-          <div className="text-center p-6 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
-            <div className="text-pacalo-gold text-3xl mb-3 flex justify-center">
+          <a
+            href="tel:3093074564"
+            className="flex items-center gap-4 p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors group"
+          >
+            <div className="text-pacalo-gold text-2xl flex-shrink-0">
               <FaPhone />
             </div>
-            <h6 className="text-pacalo-gold font-bold mb-2 text-sm uppercase">
-              Call Us
-            </h6>
-            <a
-              href="tel:3093074564"
-              className="text-white font-bold text-xl hover:text-pacalo-gold transition-colors block"
-            >
-              (309) 307-4564
-            </a>
-            <div className="mt-2 text-gray-300 text-sm">Available 24/7</div>
-          </div>
+            <div className="flex-1 min-w-0">
+              <div className="text-xs text-pacalo-gold font-semibold mb-1 uppercase">
+                Call Us
+              </div>
+              <div className="text-lg font-bold group-hover:text-pacalo-gold transition-colors">
+                (309) 307-4564
+              </div>
+              <div className="text-xs text-gray-300">Available 24/7</div>
+            </div>
+          </a>
 
           {/* Email Card */}
-          <div className="text-center p-6 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
-            <div className="text-pacalo-gold text-3xl mb-3 flex justify-center">
+          <a
+            href="mailto:ride@pacalo.net"
+            className="flex items-center gap-4 p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors group"
+          >
+            <div className="text-pacalo-gold text-2xl flex-shrink-0">
               <FaEnvelope />
             </div>
-            <h6 className="text-pacalo-gold font-bold mb-2 text-sm uppercase">
-              Email Us
-            </h6>
-            <a
-              href="mailto:ride@pacalo.net"
-              className="text-white font-bold text-lg hover:text-pacalo-gold transition-colors break-all block"
-            >
-              ride@pacalo.net
-            </a>
-            <div className="mt-2 text-gray-300 text-sm">Quick Response</div>
-          </div>
+            <div className="flex-1 min-w-0">
+              <div className="text-xs text-pacalo-gold font-semibold mb-1 uppercase">
+                Email Us
+              </div>
+              <div className="text-lg font-bold group-hover:text-pacalo-gold transition-colors break-all">
+                ride@pacalo.net
+              </div>
+              <div className="text-xs text-gray-300">Quick Response</div>
+            </div>
+          </a>
 
           {/* Hours Card */}
-          <div className="text-center p-6 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
-            <div className="text-pacalo-gold text-3xl mb-3 flex justify-center">
+          <div className="flex items-center gap-4 p-4 bg-white/10 rounded-lg">
+            <div className="text-pacalo-gold text-2xl flex-shrink-0">
               <FaClock />
             </div>
-            <h6 className="text-pacalo-gold font-bold mb-2 text-sm uppercase">
-              Operating Hours
-            </h6>
-            <p className="text-white font-bold text-xl">
-              24/7 Service
-            </p>
-            <div className="mt-2 text-gray-300 text-sm">Monday - Sunday</div>
+            <div className="flex-1">
+              <div className="text-xs text-pacalo-gold font-semibold mb-1 uppercase">
+                Service Hours
+              </div>
+              <div className="text-lg font-bold">
+                24/7 Service
+              </div>
+              <div className="text-xs text-gray-300">Monday - Sunday</div>
+            </div>
           </div>
         </div>
       </div>

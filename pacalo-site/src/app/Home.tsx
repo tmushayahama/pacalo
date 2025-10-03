@@ -25,8 +25,8 @@ const Home: React.FC = () => {
         <ServicesSection />
         <CertificationsSection />
         <WhyChooseUsSection />
-        <BookingForm />
         <ReviewsCarousel />
+        <BookingForm />
         <FAQ />
         <AboutUsSection />
       </main>
