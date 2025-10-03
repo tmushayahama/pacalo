@@ -1,0 +1,39 @@
+import type React from 'react'
+import { Navigation } from '@/features/home'
+import Footer from '@/features/home/Footer'
+import BookingForm from '@/features/home/components/BookingForm'
+
+const RequestRidePage: React.FC = () => {
+  return (
+    <div className="font-roboto bg-white overflow-x-hidden">
+      <Navigation />
+      <main className="pt-24 pb-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <div>
+              <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Request a Ride</h1>
+              <p className="text-gray-600 mb-6">Tell us where you need to go—we'll handle the rest with safe, professional care.</p>
+              <div className="bg-white rounded-2xl shadow-xl ring-1 ring-gray-200 p-6 md:p-8">
+                <BookingForm />
+              </div>
+            </div>
+            <aside className="bg-blue-50 border border-blue-100 rounded-2xl p-6 md:p-8">
+              <h2 className="text-xl font-bold text-gray-900 mb-2">Prefer to talk?</h2>
+              <p className="text-gray-700 mb-4">We're available 24/7 for scheduling and questions.</p>
+              <div className="space-y-3">
+                <a href="tel:3093074564" className="inline-flex items-center px-4 py-2 rounded-lg bg-pacalo-blue text-white font-bold hover:bg-blue-700">Call (309) 307-4564</a>
+                <div className="flex gap-3">
+                  <a href="https://wa.me/13093074564?text=Hello,%20I%20would%20like%20to%20book%20a%20medical%20transport%20service." target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 rounded-lg bg-green-600 text-white font-bold hover:bg-green-700">WhatsApp</a>
+                  <a href="mailto:ride@pacalo.net" className="inline-flex items-center px-4 py-2 rounded-lg bg-pacalo-gold text-white font-bold hover:bg-yellow-600">Email</a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  )
+}
+
+export default RequestRidePage

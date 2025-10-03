@@ -1,5 +1,6 @@
 import type React from 'react'
 import { ServiceCard } from './components/ServiceComponents'
+import { Link } from 'react-router-dom'
 
 const ServicesSection: React.FC = () => {
   const services = [
@@ -37,6 +38,9 @@ const ServicesSection: React.FC = () => {
           {services.map((service, index) => (
             <ServiceCard key={index} {...service} />
           ))}
+        </div>
+        <div className="mt-10 text-center">
+          <Link to="/services" className="inline-block px-6 py-3 rounded-xl bg-pacalo-blue text-white font-bold hover:bg-blue-700 transition-colors">Learn more about our services</Link>
         </div>
       </div>
     </section>

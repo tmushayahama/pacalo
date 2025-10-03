@@ -1,5 +1,6 @@
 import type React from 'react'
 import { FaStar } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const WhyChooseUsSection: React.FC = () => {
   const partners = [
@@ -69,6 +70,9 @@ const WhyChooseUsSection: React.FC = () => {
             <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
               We prioritize your health schedule and ensure <strong className="text-pacalo-blue">on-time appointments</strong> for all transportation needs.
             </p>
+            <div className="mt-6">
+              <Link to="/certifications" className="inline-block px-6 py-3 rounded-xl bg-pacalo-blue text-white font-bold hover:bg-blue-700 transition-colors">See our certifications</Link>
+            </div>
           </div>
         </div>
 

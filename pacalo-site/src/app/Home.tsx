@@ -12,6 +12,7 @@ import BookingForm from '@/features/home/components/BookingForm'
 import ReviewsStripCarousel from '@/features/reviews/components/ReviewStripCarousel'
 import FAQ from '@/features/home/components/FAQ'
 import { FaPhone, FaEnvelope } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Home: React.FC = () => {
   return (
@@ -42,11 +43,14 @@ const Home: React.FC = () => {
               <div className="order-2">
                 <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-xl ring-1 ring-gray-200 p-6 md:p-8">
                   <FAQ />
+                  <div className="mt-4 text-right">
+                    <Link to="/faq" className="text-pacalo-blue font-semibold hover:underline">View all FAQs →</Link>
+                  </div>
                 </div>
               </div>
 
             </div>
-            <div className="mt-12 bg-pacalo-blue rounded-lg p-8 text-center text-white">
+            <div id="contact" className="mt-12 bg-pacalo-blue rounded-lg p-8 text-center text-white">
               <h3 className="text-2xl font-bold mb-4">Still have questions?</h3>
               <p className="text-lg mb-6">
                 Our team is here to help 24/7. Give us a call or send us an email.

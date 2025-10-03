@@ -1,6 +1,6 @@
 import type React from 'react'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { FaBars, FaTimes, FaPhone, FaWhatsapp } from 'react-icons/fa'
 
 interface NavigationItem {
@@ -33,14 +33,24 @@ const NavLink: React.FC<{ item: NavigationItem; className?: string; onClick?: ()
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const location = useLocation()
+  const isHome = location.pathname === '/'
 
-  const navigationItems: NavigationItem[] = [
-    { href: '#services', label: 'Services' },
-    { href: '/gallery', label: 'Gallery', isRoute: true },
-    { href: '#partner', label: 'Our Partners' },
-    { href: '#about-us', label: 'About Us' },
-    { href: '#contact', label: 'Contact' }
-  ]
+  const navigationItems: NavigationItem[] = isHome
+    ? [
+      { href: '#services', label: 'Services' },
+      { href: '/gallery', label: 'Gallery', isRoute: true },
+      { href: '#partner', label: 'Our Partners' },
+      { href: '#about-us', label: 'About Us' },
+      { href: '#contact', label: 'Contact' }
+    ]
+    : [
+      { href: '/services', label: 'Services', isRoute: true },
+      { href: '/gallery', label: 'Gallery', isRoute: true },
+      { href: '/certifications', label: 'Certifications', isRoute: true },
+      { href: '/faq', label: 'FAQ', isRoute: true },
+      { href: '/contact', label: 'Contact', isRoute: true }
+    ]
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
   const closeMenu = () => setIsMenuOpen(false)
