@@ -1,5 +1,5 @@
 import type React from 'react'
-import { FaStar } from 'react-icons/fa'
+import { FaStar, FaWhatsapp } from 'react-icons/fa'
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
@@ -48,6 +48,18 @@ const Footer: React.FC = () => {
                 <div className="text-sm text-gray-400 mb-2">Phone</div>
                 <a href="tel:3093074564" className="text-xl lg:text-2xl font-semibold hover:text-pacalo-gold transition-all duration-200 hover:scale-105 inline-block">
                   (309) 307-4564
+                </a>
+              </div>
+              <div className="bg-green-600/10 rounded-2xl p-6 border border-green-500/20">
+                <div className="text-sm text-gray-400 mb-2">WhatsApp</div>
+                <a
+                  href="https://wa.me/13093074564?text=Hello,%20I%20would%20like%20to%20book%20a%20medical%20transport%20service."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center md:justify-end text-green-400 hover:text-green-300 transition-all duration-200 hover:scale-105 text-lg font-medium"
+                >
+                  <FaWhatsapp className="mr-2" />
+                  Message Us
                 </a>
               </div>
               <div className="bg-white/5 rounded-2xl p-6 border border-white/10">

@@ -8,7 +8,7 @@ const Gallery: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <Navigation />
-      
+
       {/* Header */}
       <div className="bg-white shadow-sm border-b mt-16 md:mt-0">
         <div className="container mx-auto px-4 py-6">

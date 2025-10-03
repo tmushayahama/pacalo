@@ -126,6 +126,7 @@ const BookingForm: React.FC = () => {
                     <MenuItem value="">Choose...</MenuItem>
                     <MenuItem value="Call">Call</MenuItem>
                     <MenuItem value="Text">Text</MenuItem>
+                    <MenuItem value="WhatsApp">WhatsApp</MenuItem>
                     <MenuItem value="Email">Email</MenuItem>
                   </Select>
                   {errors.preferredContact && (

@@ -1,5 +1,5 @@
 import type React from 'react'
-import { FaPhone, FaEnvelope, FaClock } from 'react-icons/fa'
+import { FaPhone, FaEnvelope, FaWhatsapp } from 'react-icons/fa'
 
 const ContactRow: React.FC = () => {
   return (
@@ -44,21 +44,26 @@ const ContactRow: React.FC = () => {
             </div>
           </a>
 
-          {/* Hours Card */}
-          <div className="flex items-center gap-4 p-4 bg-white/10 rounded-lg">
-            <div className="text-pacalo-gold text-2xl flex-shrink-0">
-              <FaClock />
+          {/* WhatsApp Card */}
+          <a
+            href="https://wa.me/13093074564?text=Hello,%20I%20would%20like%20to%20book%20a%20medical%20transport%20service."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 p-4 bg-green-600/20 rounded-lg hover:bg-green-600/30 transition-colors group border border-green-500/30"
+          >
+            <div className="text-green-400 text-2xl flex-shrink-0">
+              <FaWhatsapp />
             </div>
             <div className="flex-1">
-              <div className="text-xs text-pacalo-gold font-semibold mb-1 uppercase">
-                Service Hours
+              <div className="text-xs text-green-400 font-semibold mb-1 uppercase">
+                WhatsApp Us
               </div>
-              <div className="text-lg font-bold">
-                24/7 Service
+              <div className="text-lg font-bold group-hover:text-green-400 transition-colors">
+                (309) 307-4564
               </div>
-              <div className="text-xs text-gray-300">Monday - Sunday</div>
+              <div className="text-xs text-gray-300">Instant Messaging</div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>

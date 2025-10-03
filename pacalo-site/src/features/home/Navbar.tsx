@@ -1,7 +1,7 @@
 import type React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FaBars, FaTimes, FaPhone } from 'react-icons/fa'
+import { FaBars, FaTimes, FaPhone, FaWhatsapp } from 'react-icons/fa'
 
 interface NavigationItem {
   href: string
@@ -59,7 +59,7 @@ const Navigation: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-10">
+          <div className="hidden lg:flex items-center space-x-6">
             {navigationItems.map((item) => (
               <NavLink
                 key={item.href}
@@ -67,13 +67,24 @@ const Navigation: React.FC = () => {
                 className="text-gray-700 hover:text-pacalo-blue font-semibold text-lg transition-all duration-200 relative group"
               />
             ))}
-            <a
-              href="tel:3093074564"
-              className="flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-pacalo-blue to-blue-700 text-white rounded-xl font-bold hover:from-blue-700 hover:to-pacalo-blue transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-            >
-              <FaPhone className="text-lg" />
-              <span className="text-lg">309-307-4564</span>
-            </a>
+            <div className="flex items-center space-x-3">
+              <a
+                href="https://wa.me/13093074564?text=Hello,%20I%20would%20like%20to%20book%20a%20medical%20transport%20service."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 px-5 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl font-bold hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                <FaWhatsapp className="text-lg" />
+                <span className="text-sm">WhatsApp</span>
+              </a>
+              <a
+                href="tel:3093074564"
+                className="flex items-center space-x-2 px-5 py-3 bg-gradient-to-r from-pacalo-blue to-blue-700 text-white rounded-xl font-bold hover:from-blue-700 hover:to-pacalo-blue transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                <FaPhone className="text-lg" />
+                <span className="text-sm">Call Now</span>
+              </a>
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -102,13 +113,22 @@ const Navigation: React.FC = () => {
                     className="block px-6 py-4 text-gray-700 hover:text-pacalo-blue hover:bg-blue-50 font-semibold text-lg rounded-lg transition-all duration-200"
                   />
                 ))}
-                <div className="pt-4 mt-4 border-t border-gray-200">
+                <div className="pt-4 mt-4 border-t border-gray-200 space-y-3">
+                  <a
+                    href="https://wa.me/13093074564?text=Hello,%20I%20would%20like%20to%20book%20a%20medical%20transport%20service."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center space-x-3 px-6 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl font-bold w-full transform hover:scale-105 transition-all duration-200 shadow-lg"
+                  >
+                    <FaWhatsapp className="text-lg" />
+                    <span className="text-lg">WhatsApp</span>
+                  </a>
                   <a
                     href="tel:3093074564"
                     className="flex items-center justify-center space-x-3 px-6 py-4 bg-gradient-to-r from-pacalo-blue to-blue-700 text-white rounded-xl font-bold w-full transform hover:scale-105 transition-all duration-200 shadow-lg"
                   >
                     <FaPhone className="text-lg" />
-                    <span className="text-lg">309-307-4564</span>
+                    <span className="text-lg">Call (309) 307-4564</span>
                   </a>
                 </div>
               </div>

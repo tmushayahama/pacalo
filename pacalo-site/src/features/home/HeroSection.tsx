@@ -1,5 +1,5 @@
 import type React from 'react'
-import { FaEnvelope, FaPhone } from 'react-icons/fa'
+import { FaEnvelope, FaPhone, FaWhatsapp } from 'react-icons/fa'
 import BookingBarForm from './components/BookingBarForm'
 import CertificationsStrip from './components/CertificationsStrip'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -76,14 +76,24 @@ const HeroSection: React.FC = () => (
 
             {/* Mobile: remove slideshow entirely */}
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               <a
                 href="tel:3093074564"
                 className="w-full flex items-center justify-center px-4 py-3 bg-pacalo-blue text-white font-bold rounded-xl hover:bg-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 <FaPhone className="w-4 h-4 mr-2 text-pacalo-gold" />
                 <span className="hidden sm:inline">Call (309) 307-4564</span>
-                <span className="sm:hidden">Call Now</span>
+                <span className="sm:hidden">Call</span>
+              </a>
+              <a
+                href="https://wa.me/13093074564?text=Hello,%20I%20would%20like%20to%20book%20a%20medical%20transport%20service."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center px-4 py-3 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                <FaWhatsapp className="w-4 h-4 mr-2" />
+                <span className="hidden sm:inline">WhatsApp</span>
+                <span className="sm:hidden">Chat</span>
               </a>
               <a
                 href="mailto:ride@pacalo.net"

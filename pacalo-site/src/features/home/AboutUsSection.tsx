@@ -1,5 +1,5 @@
 import type React from 'react'
-import { FaPhone, FaEnvelope, FaClock } from 'react-icons/fa'
+import { FaPhone, FaEnvelope, FaClock, FaWhatsapp } from 'react-icons/fa'
 
 const AboutUsSectionNew: React.FC = () => {
   return (
@@ -53,6 +53,21 @@ const AboutUsSectionNew: React.FC = () => {
                   </div>
                   <div>
                     <span className="block text-sm text-gray-300 mb-2">Call Us Anytime</span>
+                    <span className="text-xl font-bold">(309) 307-4564</span>
+                  </div>
+                </a>
+
+                <a
+                  href="https://wa.me/13093074564?text=Hello,%20I%20would%20like%20to%20book%20a%20medical%20transport%20service."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-4 p-6 bg-green-600/20 rounded-2xl hover:bg-green-600/30 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border border-green-500/30"
+                >
+                  <div className="text-green-400 text-3xl flex-shrink-0">
+                    <FaWhatsapp />
+                  </div>
+                  <div>
+                    <span className="block text-sm text-gray-300 mb-2">Message Us on WhatsApp</span>
                     <span className="text-xl font-bold">(309) 307-4564</span>
                   </div>
                 </a>
