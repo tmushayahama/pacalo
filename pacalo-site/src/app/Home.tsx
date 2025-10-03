@@ -6,9 +6,7 @@ import {
   WhyChooseUsSection,
   AboutUsSection
 } from '../features/home'
-import ContactRow from '../features/home/ContactRow'
 import Footer from '../features/home/Footer'
-import CertificationsSection from '../features/home/CertificationsSection'
 import ReviewsCarousel from '@/features/reviews/components/ReviewsCarousel'
 import BookingForm from '@/features/home/components/BookingForm'
 import ReviewsStripCarousel from '@/features/reviews/components/ReviewStripCarousel'
@@ -20,10 +18,9 @@ const Home: React.FC = () => {
       <Navigation />
       <HeroSection />
       <ReviewsStripCarousel />
-      <ContactRow />
-      <main className="relative">
+      {/*     <ContactRow /> */}
+      <main className="relative space-y-0">
         <ServicesSection />
-        <CertificationsSection />
         <WhyChooseUsSection />
         <ReviewsCarousel />
         <BookingForm />

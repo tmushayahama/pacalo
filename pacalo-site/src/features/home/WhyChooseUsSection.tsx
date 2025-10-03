@@ -32,62 +32,64 @@ const WhyChooseUsSection: React.FC = () => {
   ]
 
   return (
-    <section id="partner" className="py-16 bg-white">
-      <div className="container mx-auto px-4 max-w-6xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+    <section id="partner" className="py-20 lg:py-24 bg-gradient-to-br from-white via-blue-50 to-gray-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             Why Choose PACALO
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Trusted by thousands for reliable medical transportation
           </p>
+          <div className="w-24 h-1 bg-gradient-to-r from-pacalo-blue to-pacalo-gold mx-auto mt-8"></div>
         </div>
 
         {/* Feature Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-20">
           {features.map((feature, index) => (
-            <div key={index} className="text-center">
-              <div className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors">
-                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white rounded-lg shadow-sm">
-                  <img src={feature.icon} alt={feature.title} className="w-10 h-10 object-contain" />
+            <div key={index} className="group text-center">
+              <div className="bg-white rounded-2xl p-8 hover:bg-gradient-to-br hover:from-pacalo-blue hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 border border-gray-100">
+                <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center bg-gradient-to-br from-pacalo-blue to-blue-700 group-hover:from-white group-hover:to-gray-100 rounded-2xl shadow-lg transition-all duration-300">
+                  <img src={feature.icon} alt={feature.title} className="w-12 h-12 object-contain" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-gray-900 group-hover:text-white mb-4 transition-colors duration-300">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 text-sm">{feature.description}</p>
+                <p className="text-gray-600 group-hover:text-gray-200 transition-colors duration-300">{feature.description}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="bg-gray-50 rounded-lg p-8 mb-16">
+        <div className="bg-gradient-to-r from-pacalo-blue/10 via-white to-pacalo-gold/10 rounded-3xl p-8 lg:p-12 mb-20 border border-gray-200 shadow-lg">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-lg text-gray-700 mb-4">
-              We provide safe and reliable NEMT services to medical centers throughout <strong>Central Illinois</strong>.
+            <p className="text-lg lg:text-xl text-gray-700 mb-6 leading-relaxed">
+              We provide safe and reliable NEMT services to medical centers throughout <strong className="text-pacalo-blue">Central Illinois</strong>.
             </p>
-            <p className="text-lg text-gray-700">
-              We prioritize your health schedule and ensure <strong>on-time appointments</strong> for all transportation needs.
+            <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
+              We prioritize your health schedule and ensure <strong className="text-pacalo-blue">on-time appointments</strong> for all transportation needs.
             </p>
           </div>
         </div>
 
-        <div className="mb-16">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">Our Partners</h3>
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Our Partners</h3>
+            <p className="text-lg text-gray-600">Trusted partnerships with leading healthcare providers</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-center max-w-4xl mx-auto">
             {partners.map((partner, index) => (
               <div key={index} className="flex justify-center">
                 <a
                   href={partner.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200"
+                  className="block p-6 lg:p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 transform hover:-translate-y-1 w-full"
                 >
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="w-full h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                    className="w-full h-16 lg:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300"
                   />
                 </a>
               </div>
@@ -95,26 +97,26 @@ const WhyChooseUsSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-pacalo-blue rounded-lg p-8 text-white text-center">
-          <div className="flex justify-center mb-4">
-            <div className="flex space-x-1">
+        <div className="bg-gradient-to-r from-pacalo-blue to-blue-700 rounded-3xl p-8 lg:p-12 text-white text-center shadow-2xl">
+          <div className="flex justify-center mb-6">
+            <div className="flex space-x-2">
               {[...Array(5)].map((_, i) => (
-                <FaStar key={i} className="w-6 h-6 text-pacalo-gold" />
+                <FaStar key={i} className="w-8 h-8 text-pacalo-gold" />
               ))}
             </div>
           </div>
-          <h3 className="text-2xl font-bold mb-4">
+          <h3 className="text-3xl lg:text-4xl font-bold mb-6">
             Highest-Rated in Central Illinois
           </h3>
-          <p className="text-lg mb-6">
+          <p className="text-lg lg:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
             Read our outstanding customer reviews to see why we are the top choice for medical transportation.
           </p>
           <a
             href="https://g.page/r/CfW0pd4CwkDbEAE/review"
-            className="inline-flex items-center px-6 py-3 bg-pacalo-gold hover:bg-yellow-500 text-pacalo-blue font-bold rounded-lg transition-colors"
+            className="inline-flex items-center px-8 py-4 bg-pacalo-gold hover:bg-yellow-500 text-pacalo-blue font-bold rounded-2xl transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
-            <FaStar className="w-5 h-5 mr-2" />
-            Write a Review
+            <FaStar className="w-6 h-6 mr-3" />
+            <span className="text-lg">Write a Review</span>
           </a>
         </div>
       </div>
