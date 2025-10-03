@@ -1,6 +1,7 @@
 import type React from 'react'
 import { FaPhone } from 'react-icons/fa'
-
+import BookingBarForm from './components/BookingBarForm'
+import CertificationsStrip from './components/CertificationsStrip'
 interface HighlightTextProps {
   children: React.ReactNode
 }
@@ -59,6 +60,9 @@ const HeroSection: React.FC = () => (
         </div>
       </div>
     </div>
+
+    <CertificationsStrip />
+    <BookingBarForm />
   </div>
 )
 
