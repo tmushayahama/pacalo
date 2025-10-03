@@ -1,10 +1,34 @@
 import type React from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { FaBars, FaTimes, FaPhone } from 'react-icons/fa'
 
 interface NavigationItem {
   href: string
   label: string
+  isRoute?: boolean
+}
+
+const NavLink: React.FC<{ item: NavigationItem; className?: string; onClick?: () => void }> = ({
+  item,
+  className = '',
+  onClick
+}) => {
+  if (item.isRoute) {
+    return (
+      <Link to={item.href} className={className} onClick={onClick}>
+        {item.label}
+        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pacalo-blue transition-all duration-200 group-hover:w-full"></span>
+      </Link>
+    )
+  }
+
+  return (
+    <a href={item.href} className={className} onClick={onClick}>
+      {item.label}
+      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pacalo-blue transition-all duration-200 group-hover:w-full"></span>
+    </a>
+  )
 }
 
 const Navigation: React.FC = () => {
@@ -12,6 +36,7 @@ const Navigation: React.FC = () => {
 
   const navigationItems: NavigationItem[] = [
     { href: '#services', label: 'Services' },
+    { href: '/gallery', label: 'Gallery', isRoute: true },
     { href: '#partner', label: 'Our Partners' },
     { href: '#about-us', label: 'About Us' },
     { href: '#contact', label: 'Contact' }
@@ -36,14 +61,11 @@ const Navigation: React.FC = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-10">
             {navigationItems.map((item) => (
-              <a
+              <NavLink
                 key={item.href}
-                href={item.href}
+                item={item}
                 className="text-gray-700 hover:text-pacalo-blue font-semibold text-lg transition-all duration-200 relative group"
-              >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pacalo-blue transition-all duration-200 group-hover:w-full"></span>
-              </a>
+              />
             ))}
             <a
               href="tel:3093074564"
@@ -73,14 +95,12 @@ const Navigation: React.FC = () => {
             <div className="container mx-auto px-4 py-6">
               <div className="space-y-1">
                 {navigationItems.map((item) => (
-                  <a
+                  <NavLink
                     key={item.href}
-                    href={item.href}
+                    item={item}
                     onClick={closeMenu}
                     className="block px-6 py-4 text-gray-700 hover:text-pacalo-blue hover:bg-blue-50 font-semibold text-lg rounded-lg transition-all duration-200"
-                  >
-                    {item.label}
-                  </a>
+                  />
                 ))}
                 <div className="pt-4 mt-4 border-t border-gray-200">
                   <a
