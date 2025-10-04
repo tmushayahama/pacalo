@@ -38,23 +38,9 @@ jobs:
       - name: Build
         working-directory: pacalo-site
         run: npm run build
+        env:
+          VITE_BASE: /pacalo/
 
-      - name: Rewrite asset URLs for project pages
-        shell: bash
-        run: |
-          set -euo pipefail
-          ROOT_PATH="/pacalo"
-          find pacalo-site/dist -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) -print0 | \
-          xargs -0 sed -i \
-            -e "s|=\"/assets/|=\"${ROOT_PATH}/assets/|g" \
-            -e "s|=\'/assets/|=\'${ROOT_PATH}/assets/|g" \
-            -e "s|\(\"/assets/|(\"${ROOT_PATH}/assets/|g" \
-            -e "s|\('/assets/|('${ROOT_PATH}/assets/|g" \
-            -e "s|url\(/assets|url\(${ROOT_PATH}/assets|g" \
-            -e "s|url\(\"/assets|url\(\"${ROOT_PATH}/assets|g" \
-            -e "s|url\('\/assets|url\('\${ROOT_PATH}/assets|g" \
-            -e "s|:\"/assets/|:\"${ROOT_PATH}/assets/|g" \
-            -e "s|:\'/assets/|:\'${ROOT_PATH}/assets/|g"
 
       - name: Create SPA fallback (404.html)
         working-directory: pacalo-site
