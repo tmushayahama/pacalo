@@ -64,7 +64,7 @@ const HeroSection: React.FC = () => (
 
       <div className="relative z-10 w-full container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col">
         <div className="max-w-4xl">
-          <div className="bg-white/90 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-2xl border border-white/20">
+          <div className="bg-white/60 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-2xl border border-white/20">
             <h1 className="text-gray-900 font-bold text-xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight mb-4">
               We proudly offer top-tier <HighlightText>stretcher</HighlightText>,{' '}
               <HighlightText>wheelchair</HighlightText>, and{' '}
@@ -82,7 +82,7 @@ const HeroSection: React.FC = () => (
                 className="w-full flex items-center justify-center px-4 py-3 bg-pacalo-blue text-white font-bold rounded-xl hover:bg-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 <FaPhone className="w-4 h-4 mr-2 text-pacalo-gold" />
-                <span className="hidden sm:inline">Call (309) 307-4564</span>
+                <span className="hidden sm:inline">Call Us </span>
                 <span className="sm:hidden">Call</span>
               </a>
               <a

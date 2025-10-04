@@ -34,7 +34,7 @@ const Home: React.FC = () => {
                 : `url('/assets/images/homepage-bg-sm.jpg')`
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-white/80 to-white/75" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/40 to-black/35" />
           <div className="relative container mx-auto px-4 py-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
               <div className="order-1">
