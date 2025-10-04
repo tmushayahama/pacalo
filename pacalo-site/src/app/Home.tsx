@@ -9,7 +9,6 @@ import {
 import Footer from '../features/home/Footer'
 import BookingForm from '@/features/home/components/BookingForm'
 import { getAssetPath } from '../utils/assets'
-import ReviewsStripCarousel from '@/features/reviews/components/ReviewsStripCarousel'
 import FAQ from '@/features/home/components/FAQ'
 import { FaPhone, FaEnvelope } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
@@ -20,7 +19,6 @@ const Home: React.FC = () => {
     <div className="font-roboto bg-white overflow-x-hidden">
       <Navigation />
       <HeroSection />
-      <ReviewsStripCarousel />
       {/*     <ContactRow /> */}
       <main className="relative space-y-0">
         <ServicesSection />

@@ -1,7 +1,7 @@
 import type React from 'react'
 import { Link } from 'react-router-dom'
 
-const RequestRideCTA: React.FC<{ className?: string }>= ({ className = '' }) => {
+const RequestRideCTA: React.FC<{ className?: string }> = ({ className = '' }) => {
   return (
     <section className={`py-10 ${className}`}>
       <div className="container mx-auto px-4">

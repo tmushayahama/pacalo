@@ -2,11 +2,11 @@ import type React from 'react'
 import { FaEnvelope, FaPhone, FaWhatsapp } from 'react-icons/fa'
 import BookingBarForm from './components/BookingBarForm'
 import CertificationsStrip from './components/CertificationsStrip'
+import FloatingActionButton from './components/FloatingActionButton'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, EffectFade } from 'swiper/modules'
 import 'swiper/swiper-bundle.css'
 import { GALLERY_IMAGES } from '../gallery/data/galleryData'
-import ReviewsCarousel from '../reviews/components/ReviewsCarousel'
 import ReviewsStripCarousel from '../reviews/components/ReviewsStripCarousel'
 import { getAssetPath } from '../../utils/assets'
 interface HighlightTextProps {
@@ -65,7 +65,7 @@ const HeroSection: React.FC = () => (
         </div>
       </div>
 
-      <div className="relative z-10 w-full container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col -ml-6 items-center">
+      <div className="relative z-10 w-full container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         <div className="max-w-4xl">
           <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl border border-white/20">
             <h1 className="text-gray-900 font-bold text-xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight mb-4">
@@ -77,16 +77,14 @@ const HeroSection: React.FC = () => (
               We provide comprehensive intercity, inter-county, and interstate services to ensure you get safely to any destination.
             </p>
 
-            {/* Mobile: remove slideshow entirely */}
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div className="grid grid-cols-3 md:grid-cols-4 gap-3">
               <a
                 href="tel:3093074564"
                 className="w-full flex items-center justify-center px-4 py-3 bg-pacalo-blue text-white font-bold rounded-xl hover:bg-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 <FaPhone className="w-4 h-4 mr-2 text-pacalo-gold" />
                 <span className="hidden sm:inline">Call Us </span>
-                <span className="sm:hidden"></span>
+                <span className="sm:hidden"> Call</span>
               </a>
               <a
                 href="https://wa.me/13093074564?text=Hello,%20I%20would%20like%20to%20book%20a%20medical%20transport%20service."
@@ -96,7 +94,7 @@ const HeroSection: React.FC = () => (
               >
                 <FaWhatsapp className="w-4 h-4 mr-2" />
                 <span className="hidden sm:inline">WhatsApp</span>
-                <span className="sm:hidden"></span>
+                <span className="sm:hidden">Chat</span>
               </a>
               <a
                 href="mailto:ride@pacalo.net"
@@ -104,28 +102,38 @@ const HeroSection: React.FC = () => (
               >
                 <FaEnvelope className="w-4 h-4 mr-2" />
                 <span className="hidden sm:inline">Email Us</span>
-                <span className="sm:hidden"></span>
+                <span className="sm:hidden"> Email</span>
               </a>
+              {/* Our Services button - hidden on mobile */}
               <a
                 href="#services"
-                className="col-span-2 md:col-span-1 w-full flex items-center justify-center px-4 py-3 bg-white text-pacalo-blue font-bold rounded-xl border-2 border-pacalo-blue hover:bg-pacalo-blue hover:text-white transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="hidden md:flex col-span-2 md:col-span-1 w-full items-center justify-center px-4 py-3 bg-white text-pacalo-blue font-bold rounded-xl border-2 border-pacalo-blue hover:bg-pacalo-blue hover:text-white transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 <span>Our Services</span>
               </a>
             </div>
           </div>
         </div>
-        <div className="mt-6 opacity-50">
+
+        {/* Certifications - now with mobile swiper */}
+        <div className="mt-6 opacity-50 w-full">
           <CertificationsStrip />
         </div>
 
-        <div className="mt-6 opacity-80">
+        {/* Reviews - only show on desktop */}
+        <div className="mt-6 opacity-80 hidden md:block">
           <ReviewsStripCarousel />
         </div>
       </div>
     </div>
 
-    <BookingBarForm />
+    {/* BookingBarForm - only show on desktop */}
+    <div className="hidden md:block">
+      <BookingBarForm />
+    </div>
+
+    {/* Floating Action Button - Mobile Only */}
+    <FloatingActionButton />
   </div>
 )
 

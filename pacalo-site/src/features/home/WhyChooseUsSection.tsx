@@ -34,7 +34,7 @@ const WhyChooseUsSection: React.FC = () => {
   ]
 
   return (
-    <section id="partner" className="py-20 lg:py-24 bg-gradient-to-br from-white via-blue-50 to-gray-50">
+    <section id="partner" className="py-20 lg:py-12 bg-gradient-to-br from-white via-blue-50 to-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
@@ -49,8 +49,8 @@ const WhyChooseUsSection: React.FC = () => {
         {/* Feature Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-20">
           {features.map((feature, index) => (
-            <div key={index} className="group text-center">
-              <div className="bg-white rounded-2xl p-8 hover:bg-gradient-to-br hover:from-pacalo-blue hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 border border-gray-100">
+            <div key={index} className="group text-center flex">
+              <div className="bg-white rounded-2xl p-8 hover:bg-gradient-to-br hover:from-pacalo-blue hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 border border-gray-100 flex flex-col h-full w-full">
                 <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center bg-gradient-to-br from-pacalo-blue to-blue-700 group-hover:from-white group-hover:to-gray-100 rounded-2xl shadow-lg transition-all duration-300">
                   <img src={feature.icon} alt={feature.title} className="w-12 h-12 object-contain" />
                 </div>
