@@ -11,7 +11,7 @@ const Gallery: React.FC = () => {
       <Navigation />
 
       {/* Header */}
-      <div className="bg-white shadow-sm border-b mt-16 md:mt-0">
+      <div className="bg-white shadow-sm border-b mt-24">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center gap-4 mb-4">
             <Link

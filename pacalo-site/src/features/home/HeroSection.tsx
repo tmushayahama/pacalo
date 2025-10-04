@@ -6,6 +6,8 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, EffectFade } from 'swiper/modules'
 import 'swiper/swiper-bundle.css'
 import { GALLERY_IMAGES } from '../gallery/data/galleryData'
+import ReviewsCarousel from '../reviews/components/ReviewsCarousel'
+import ReviewsStripCarousel from '../reviews/components/ReviewsStripCarousel'
 interface HighlightTextProps {
   children: React.ReactNode
 }
@@ -62,16 +64,16 @@ const HeroSection: React.FC = () => (
         </div>
       </div>
 
-      <div className="relative z-10 w-full container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col">
+      <div className="relative z-10 w-full container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col -ml-6 items-center">
         <div className="max-w-4xl">
-          <div className="bg-white/60 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-2xl border border-white/20">
+          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl border border-white/20">
             <h1 className="text-gray-900 font-bold text-xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight mb-4">
-              We proudly offer top-tier <HighlightText>stretcher</HighlightText>,{' '}
+              We proudly offer top-tier <br /> <HighlightText>stretcher</HighlightText>,{' '}
               <HighlightText>wheelchair</HighlightText>, and{' '}
               <HighlightText>ambulatory transportation</HighlightText>.
             </h1>
-            <p className="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed mb-6">
-              Need to go further? We provide comprehensive intercity, inter-county, and interstate services to ensure you get safely to any destination.
+            <p className="text-black font-bold text-sm md:text-base lg:text-lg leading-relaxed mb-6">
+              We provide comprehensive intercity, inter-county, and interstate services to ensure you get safely to any destination.
             </p>
 
             {/* Mobile: remove slideshow entirely */}
@@ -83,7 +85,7 @@ const HeroSection: React.FC = () => (
               >
                 <FaPhone className="w-4 h-4 mr-2 text-pacalo-gold" />
                 <span className="hidden sm:inline">Call Us </span>
-                <span className="sm:hidden">Call</span>
+                <span className="sm:hidden"></span>
               </a>
               <a
                 href="https://wa.me/13093074564?text=Hello,%20I%20would%20like%20to%20book%20a%20medical%20transport%20service."
@@ -93,7 +95,7 @@ const HeroSection: React.FC = () => (
               >
                 <FaWhatsapp className="w-4 h-4 mr-2" />
                 <span className="hidden sm:inline">WhatsApp</span>
-                <span className="sm:hidden">Chat</span>
+                <span className="sm:hidden"></span>
               </a>
               <a
                 href="mailto:ride@pacalo.net"
@@ -101,7 +103,7 @@ const HeroSection: React.FC = () => (
               >
                 <FaEnvelope className="w-4 h-4 mr-2" />
                 <span className="hidden sm:inline">Email Us</span>
-                <span className="sm:hidden">Email</span>
+                <span className="sm:hidden"></span>
               </a>
               <a
                 href="#services"
@@ -112,8 +114,12 @@ const HeroSection: React.FC = () => (
             </div>
           </div>
         </div>
-        <div className="mt-6 opacity-70">
+        <div className="mt-6 opacity-50">
           <CertificationsStrip />
+        </div>
+
+        <div className="mt-6 opacity-80">
+          <ReviewsStripCarousel />
         </div>
       </div>
     </div>

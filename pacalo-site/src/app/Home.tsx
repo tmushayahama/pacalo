@@ -7,12 +7,12 @@ import {
   AboutUsSection
 } from '../features/home'
 import Footer from '../features/home/Footer'
-import ReviewsCarousel from '@/features/reviews/components/ReviewsCarousel'
 import BookingForm from '@/features/home/components/BookingForm'
-import ReviewsStripCarousel from '@/features/reviews/components/ReviewStripCarousel'
+import ReviewsStripCarousel from '@/features/reviews/components/ReviewsStripCarousel'
 import FAQ from '@/features/home/components/FAQ'
 import { FaPhone, FaEnvelope } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import CertificationsSection from '@/features/home/CertificationsSection'
 
 const Home: React.FC = () => {
   return (
@@ -24,7 +24,7 @@ const Home: React.FC = () => {
       <main className="relative space-y-0">
         <ServicesSection />
         <WhyChooseUsSection />
-        <ReviewsCarousel />
+        <CertificationsSection />
         <section className="relative">
           <div
             className="absolute inset-0 bg-cover bg-center"

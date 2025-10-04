@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
@@ -14,6 +15,8 @@ export default defineConfig(({ command, mode }) => {
   //console.log('Command:', command)
 
   return {
+    // If deploying under a repository path on GitHub Pages, set VITE_BASE (e.g., '/pacalo/')
+    base: env.VITE_BASE || '/',
     logLevel: 'info',
     plugins: [
       react(),
