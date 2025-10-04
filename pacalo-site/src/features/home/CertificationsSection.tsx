@@ -1,9 +1,10 @@
 import type React from 'react'
+import { getAssetPath } from '../../utils/assets'
 
 const CertificationsSection: React.FC = () => {
   const certifications = [
     {
-      image: "/assets/images/idhs.jpg",
+      image: getAssetPath("/assets/images/idhs.jpg"),
       alt: "IDHS logo",
       className: "h-20 w-auto",
       content: (
@@ -13,7 +14,7 @@ const CertificationsSection: React.FC = () => {
       )
     },
     {
-      image: "/assets/images/cpr.png",
+      image: getAssetPath("/assets/images/cpr.png"),
       alt: "CPR badge",
       className: "h-20 w-20",
       content: (
@@ -23,7 +24,7 @@ const CertificationsSection: React.FC = () => {
       )
     },
     {
-      image: "/assets/images/national-registry.png",
+      image: getAssetPath("/assets/images/national-registry.png"),
       alt: "EMT registry badge",
       className: "h-20 w-20",
       content: (
@@ -33,7 +34,7 @@ const CertificationsSection: React.FC = () => {
       )
     },
     {
-      image: "/assets/images/idph.png",
+      image: getAssetPath("/assets/images/idph.png"),
       alt: "IDPH logo",
       className: "h-20 w-auto",
       content: (

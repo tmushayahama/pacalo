@@ -8,6 +8,7 @@ import 'swiper/swiper-bundle.css'
 import { GALLERY_IMAGES } from '../gallery/data/galleryData'
 import ReviewsCarousel from '../reviews/components/ReviewsCarousel'
 import ReviewsStripCarousel from '../reviews/components/ReviewsStripCarousel'
+import { getAssetPath } from '../../utils/assets'
 interface HighlightTextProps {
   children: React.ReactNode
 }
@@ -29,8 +30,8 @@ const HeroSection: React.FC = () => (
       className="min-h-[60vh] md:min-h-[70vh] bg-cover bg-center relative flex items-center"
       style={{
         backgroundImage: window.innerWidth >= 768
-          ? `url('/assets/images/homepage-bg.png')`
-          : `url('/assets/images/homepage-bg-sm.png')`
+          ? `url('${getAssetPath('/assets/images/homepage-bg.png')}')`
+          : `url('${getAssetPath('/assets/images/homepage-bg-sm.png')}')`
       }}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/45 to-black/30 z-[5]" />

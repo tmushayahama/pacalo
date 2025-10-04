@@ -1,32 +1,33 @@
 import type React from 'react'
 import { FaStar } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import { getAssetPath } from '../../utils/assets'
 
 const WhyChooseUsSection: React.FC = () => {
   const partners = [
-    { name: 'Fresenius Kidney Care', logo: '/assets/images/logos/fraseneus.png', url: 'https://www.freseniuskidneycare.com/' },
-    { name: 'NetSpap', logo: '/assets/images/logos/netspap-bw.png', url: 'https://netspap.com/' },
-    { name: 'OSF Healthcare', logo: '/assets/images/logos/osf.png', url: 'https://www.osfhealthcare.org/' }
+    { name: 'Fresenius Kidney Care', logo: getAssetPath('/assets/images/logos/fraseneus.png'), url: 'https://www.freseniuskidneycare.com/' },
+    { name: 'NetSpap', logo: getAssetPath('/assets/images/logos/netspap-bw.png'), url: 'https://netspap.com/' },
+    { name: 'OSF Healthcare', logo: getAssetPath('/assets/images/logos/osf.png'), url: 'https://www.osfhealthcare.org/' }
   ]
 
   const features = [
     {
-      icon: '/assets/images/icons/time.png',
+      icon: getAssetPath('/assets/images/icons/time.png'),
       title: 'Always On Time',
       description: 'Regular, punctual appointments that respect your health schedule'
     },
     {
-      icon: '/assets/images/icons/shield.png',
+      icon: getAssetPath('/assets/images/icons/shield.png'),
       title: 'Safe & Reliable',
       description: 'Professional drivers with comprehensive safety training'
     },
     {
-      icon: '/assets/images/icons/stars.png',
+      icon: getAssetPath('/assets/images/icons/stars.png'),
       title: 'Highest Rated',
       description: 'Top-rated NEMT service in Central Illinois'
     },
     {
-      icon: '/assets/images/icons/van.png',
+      icon: getAssetPath('/assets/images/icons/van.png'),
       title: 'Modern Fleet',
       description: 'Well-maintained vehicles with medical equipment'
     }

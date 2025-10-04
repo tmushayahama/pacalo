@@ -8,6 +8,7 @@ import {
 } from '../features/home'
 import Footer from '../features/home/Footer'
 import BookingForm from '@/features/home/components/BookingForm'
+import { getAssetPath } from '../utils/assets'
 import ReviewsStripCarousel from '@/features/reviews/components/ReviewsStripCarousel'
 import FAQ from '@/features/home/components/FAQ'
 import { FaPhone, FaEnvelope } from 'react-icons/fa'
@@ -30,8 +31,8 @@ const Home: React.FC = () => {
             className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage: (window.innerWidth >= 768)
-                ? `url('/assets/images/homepage-bg-2.jpg')`
-                : `url('/assets/images/homepage-bg-sm.jpg')`
+                ? `url('${getAssetPath('/assets/images/homepage-bg-2.jpg')}')`
+                : `url('${getAssetPath('/assets/images/homepage-bg-sm.jpg')}')`
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/40 to-black/35" />

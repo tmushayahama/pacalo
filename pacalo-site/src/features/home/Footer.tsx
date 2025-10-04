@@ -1,5 +1,6 @@
 import type React from 'react'
 import { FaStar, FaWhatsapp } from 'react-icons/fa'
+import { getAssetPath } from '../../utils/assets'
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
@@ -12,7 +13,7 @@ const Footer: React.FC = () => {
           <div className="text-center md:text-left">
             <div className="mb-6">
               <img
-                src="/assets/images/logos/Transparent Logo.png"
+                src={getAssetPath("/assets/images/logos/Transparent Logo.png")}
                 alt="PACALO Logo"
                 className="h-16 mx-auto md:mx-0"
               />
@@ -52,7 +53,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="bg-green-600/10 rounded-2xl p-6 border border-green-500/20">
                 <div className="text-sm text-gray-400 mb-2">WhatsApp</div>
-                <a 
+                <a
                   href="https://wa.me/13093074564?text=Hello,%20I%20would%20like%20to%20book%20a%20medical%20transport%20service."
                   target="_blank"
                   rel="noopener noreferrer"

@@ -1,23 +1,24 @@
 import type React from 'react'
 import { ServiceCard } from './components/ServiceComponents'
 import { Link } from 'react-router-dom'
+import { getAssetPath } from '../../utils/assets'
 
 const ServicesSection: React.FC = () => {
   const services = [
     {
       title: "Wheelchair Transportation Excellence",
       description: "Embrace accessible transportation with our ADA-compliant services, tailored to accommodate wheelchairs of all sizes!",
-      icon: "/assets/images/van.jpg"
+      icon: getAssetPath("/assets/images/van.jpg")
     },
     {
       title: "Ambulatory Transportation Convenience",
       description: "Experience effortless mobility with our reliable Ambulatory transportation services!",
-      icon: "/assets/images/car.jpg"
+      icon: getAssetPath("/assets/images/car.jpg")
     },
     {
       title: "Professional Gurney/Stretcher Transport",
       description: "Our service is professional, comfortable, and safe, with a team of highly trained EMTs and CPR-qualified personnel. You can trust us for a peaceful, secure journey every time.",
-      icon: "/assets/images/stretcher.jpg"
+      icon: getAssetPath("/assets/images/stretcher.jpg")
     }
   ];
 
