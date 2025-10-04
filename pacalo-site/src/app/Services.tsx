@@ -2,6 +2,7 @@ import type React from 'react'
 import { Navigation, ServicesSection } from '@/features/home'
 import Footer from '@/features/home/Footer'
 import { Link } from 'react-router-dom'
+import RequestRideCTA from '@/features/home/components/RequestRideCTA'
 
 const ServicesPage: React.FC = () => {
   return (
@@ -28,6 +29,7 @@ const ServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
+        <RequestRideCTA />
       </main>
       <Footer />
     </div>

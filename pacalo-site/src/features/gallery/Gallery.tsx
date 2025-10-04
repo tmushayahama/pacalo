@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { FaImages, FaArrowLeft } from 'react-icons/fa'
 import { Navigation } from '../home'
 import GalleryGrid from './components/GalleryGrid'
+import RequestRideCTA from '@/features/home/components/RequestRideCTA'
 
 const Gallery: React.FC = () => {
   return (
@@ -41,6 +42,8 @@ const Gallery: React.FC = () => {
       <div className="container mx-auto px-4 py-8">
         <GalleryGrid />
       </div>
+
+      <RequestRideCTA />
     </div>
   )
 }

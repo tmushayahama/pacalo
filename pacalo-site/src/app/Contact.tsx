@@ -2,6 +2,7 @@ import type React from 'react'
 import { Navigation } from '@/features/home'
 import Footer from '@/features/home/Footer'
 import { FaPhone, FaEnvelope, FaWhatsapp, FaClock } from 'react-icons/fa'
+import RequestRideCTA from '@/features/home/components/RequestRideCTA'
 
 const ContactPage: React.FC = () => {
   return (
@@ -46,6 +47,7 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </main>
+      <RequestRideCTA />
       <Footer />
     </div>
   )

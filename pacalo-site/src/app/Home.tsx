@@ -30,8 +30,8 @@ const Home: React.FC = () => {
             className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage: (window.innerWidth >= 768)
-                ? `url('/assets/images/homepage-bg.png')`
-                : `url('/assets/images/homepage-bg-sm.png')`
+                ? `url('/assets/images/homepage-bg-2.jpg')`
+                : `url('/assets/images/homepage-bg-sm.jpg')`
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-white/80 to-white/75" />

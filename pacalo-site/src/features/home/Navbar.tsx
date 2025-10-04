@@ -1,7 +1,7 @@
 import type React from 'react'
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { FaBars, FaTimes, FaPhone, FaWhatsapp } from 'react-icons/fa'
+import { FaBars, FaTimes, FaPhone, FaWhatsapp, FaHome } from 'react-icons/fa'
 
 interface NavigationItem {
   href: string
@@ -59,17 +59,28 @@ const Navigation: React.FC = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
+          {/* Logo (click to go Home) */}
           <div className="flex-shrink-0">
-            <img
-              src="/assets/images/logos/Transparent Logo.png"
-              alt="PACALO Logo"
-              className="h-14 w-auto hover:scale-105 transition-transform duration-300"
-            />
+            <Link to="/" className="inline-block" aria-label="Go to Home">
+              <img
+                src="/assets/images/logos/Transparent Logo.png"
+                alt="PACALO Logo"
+                className="h-14 w-auto hover:scale-105 transition-transform duration-300"
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6">
+            {/* Home icon */}
+            <Link
+              to="/"
+              className="text-gray-700 hover:text-pacalo-blue transition-all duration-200 p-2 rounded-lg hover:bg-gray-100"
+              aria-label="Home"
+              title="Home"
+            >
+              <FaHome className="text-2xl" />
+            </Link>
             {navigationItems.map((item) => (
               <NavLink
                 key={item.href}
@@ -115,6 +126,13 @@ const Navigation: React.FC = () => {
           <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-xl border-t border-gray-200">
             <div className="container mx-auto px-4 py-6">
               <div className="space-y-1">
+                <Link
+                  to="/"
+                  onClick={closeMenu}
+                  className="block px-6 py-4 text-gray-700 hover:text-pacalo-blue hover:bg-blue-50 font-semibold text-lg rounded-lg transition-all duration-200"
+                >
+                  <span className="inline-flex items-center gap-2"><FaHome /> Home</span>
+                </Link>
                 {navigationItems.map((item) => (
                   <NavLink
                     key={item.href}

@@ -2,6 +2,7 @@ import type React from 'react'
 import { Navigation } from '@/features/home'
 import Footer from '@/features/home/Footer'
 import CertificationsSection from '@/features/home/CertificationsSection'
+import RequestRideCTA from '@/features/home/components/RequestRideCTA'
 
 const CertificationsPage: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const CertificationsPage: React.FC = () => {
           </div>
         </header>
         <CertificationsSection />
+        <RequestRideCTA />
       </main>
       <Footer />
     </div>

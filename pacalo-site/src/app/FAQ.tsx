@@ -2,6 +2,7 @@ import type React from 'react'
 import { Navigation } from '@/features/home'
 import Footer from '@/features/home/Footer'
 import FAQ from '@/features/home/components/FAQ'
+import RequestRideCTA from '@/features/home/components/RequestRideCTA'
 
 const FAQPage: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const FAQPage: React.FC = () => {
             </div>
           </div>
         </div>
+        <RequestRideCTA />
       </main>
       <Footer />
     </div>
