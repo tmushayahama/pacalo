@@ -2,6 +2,7 @@ import type React from 'react'
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { FaBars, FaTimes, FaPhone, FaWhatsapp, FaHome } from 'react-icons/fa'
+import { getAssetPath } from '@/utils/assets'
 
 interface NavigationItem {
   href: string
@@ -63,7 +64,7 @@ const Navigation: React.FC = () => {
           <div className="flex-shrink-0">
             <Link to="/" className="inline-block" aria-label="Go to Home">
               <img
-                src="/assets/images/logos/Transparent Logo.png"
+                src={getAssetPath('/assets/images/logos/Transparent Logo.png')}
                 alt="PACALO Logo"
                 className="h-14 w-auto hover:scale-105 transition-transform duration-300"
               />

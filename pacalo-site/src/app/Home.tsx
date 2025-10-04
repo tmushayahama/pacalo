@@ -13,6 +13,7 @@ import FAQ from '@/features/home/components/FAQ'
 import { FaPhone, FaEnvelope } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import CertificationsSection from '@/features/home/CertificationsSection'
+import FloatingActionButton from '@/features/home/components/FloatingActionButton'
 
 const Home: React.FC = () => {
   return (
@@ -74,6 +75,8 @@ const Home: React.FC = () => {
         <AboutUsSection />
       </main>
       <Footer />
+
+      <FloatingActionButton />
     </div>
   )
 }

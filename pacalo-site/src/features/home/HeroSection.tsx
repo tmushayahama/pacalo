@@ -2,13 +2,13 @@ import type React from 'react'
 import { FaEnvelope, FaPhone, FaWhatsapp } from 'react-icons/fa'
 import BookingBarForm from './components/BookingBarForm'
 import CertificationsStrip from './components/CertificationsStrip'
-import FloatingActionButton from './components/FloatingActionButton'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, EffectFade } from 'swiper/modules'
 import 'swiper/swiper-bundle.css'
 import { GALLERY_IMAGES } from '../gallery/data/galleryData'
 import ReviewsStripCarousel from '../reviews/components/ReviewsStripCarousel'
 import { getAssetPath } from '../../utils/assets'
+
 interface HighlightTextProps {
   children: React.ReactNode
 }
@@ -26,42 +26,58 @@ const vans = GALLERY_IMAGES.filter(img => img.category === 'vehicle' || img.cate
 
 const HeroSection: React.FC = () => (
   <div className="">
+    <style>{`
+      .soft-cloud {
+        border-radius: 65% 35% 45% 55% / 55% 40% 60% 45%;
+      }
+    `}</style>
+
     <div
-      className="min-h-[60vh] md:min-h-[70vh] bg-cover bg-center relative flex items-center"
+      className="min-h-[80vh] md:min-h-[70vh] bg-cover bg-top relative flex items-center"
       style={{
         backgroundImage: window.innerWidth >= 768
           ? `url('${getAssetPath('/assets/images/homepage-bg.png')}')`
           : `url('${getAssetPath('/assets/images/homepage-bg-sm.png')}')`
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/45 to-black/30 z-[5]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-pacalo-gold/40 via-white/45 to-pacalo-blue/70 z-[5]" />
 
-      {/* Vans slideshow: above background, below text (desktop) */}
-      <div className="pointer-events-none absolute right-1 sm:right-2 md:right-4 lg:right-6 top-1/2 -translate-y-1/2 z-[2] w-[42vw] sm:w-[38vw] md:w-[34vw] lg:w-[30vw] max-w-[520px] hidden md:block opacity-80">
-        <div className="relative rounded-[2.25rem] overflow-hidden ring-1 ring-white/20 shadow-lg bg-white/5 backdrop-blur-sm">
-          {/* cloud glow accents */}
-          <span className="absolute -top-8 -left-8 w-32 h-32 bg-white/40 rounded-full blur-3xl" />
-          <span className="absolute -bottom-10 -right-8 w-36 h-36 bg-blue-100/40 rounded-full blur-3xl" />
-          <Swiper
-            modules={[Autoplay, EffectFade]}
-            slidesPerView={1}
-            loop
-            effect="fade"
-            autoplay={{ delay: 3200, disableOnInteraction: false }}
-            className="w-full h-full"
-          >
-            {vans.map((image) => (
-              <SwiperSlide key={image.src}>
-                <img
-                  src={image.src}
-                  alt={image.title}
-                  className="block w-full h-full object-cover aspect-[16/10]"
-                  loading="eager"
-                  decoding="async"
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+      {/* Vans slideshow with soft cloud frame */}
+      <div className="pointer-events-none absolute right-1 sm:right-2 md:right-4 lg:right-6 top-1/2 -translate-y-1/2 z-[2] w-[42vw] sm:w-[45vw] max-w-[520px] hidden md:block">
+        <div className="relative">
+          {/* Soft cloud-shaped border with gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-white to-blue-50 p-1 soft-cloud shadow-2xl">
+            <div className="w-full h-full bg-gradient-to-br from-white/80 to-blue-50/80 backdrop-blur-md soft-cloud"></div>
+          </div>
+
+          {/* Soft glow effects */}
+          <span className="absolute -top-16 -left-16 w-48 h-48 bg-blue-200/40 rounded-full blur-3xl" />
+          <span className="absolute -bottom-16 -right-16 w-52 h-52 bg-blue-100/30 rounded-full blur-3xl" />
+          <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-white/20 rounded-full blur-3xl" />
+
+          {/* Content container */}
+          <div className="relative overflow-hidden soft-cloud shadow-xl">
+            <Swiper
+              modules={[Autoplay, EffectFade]}
+              slidesPerView={1}
+              loop
+              effect="fade"
+              autoplay={{ delay: 3200, disableOnInteraction: false }}
+              className="w-full h-full"
+            >
+              {vans.map((image) => (
+                <SwiperSlide key={image.src}>
+                  <img
+                    src={image.src}
+                    alt={image.title}
+                    className="block w-full h-full object-cover aspect-[16/10]"
+                    loading="eager"
+                    decoding="async"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </div>
 
@@ -104,7 +120,7 @@ const HeroSection: React.FC = () => (
                 <span className="hidden sm:inline">Email Us</span>
                 <span className="sm:hidden"> Email</span>
               </a>
-              {/* Our Services button - hidden on mobile */}
+
               <a
                 href="#services"
                 className="col-span-2 md:col-span-1 w-full hidden md:flex items-center justify-center px-4 py-3 bg-white text-pacalo-blue font-bold rounded-xl border-2 border-pacalo-blue hover:bg-pacalo-blue hover:text-white transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
@@ -115,27 +131,20 @@ const HeroSection: React.FC = () => (
           </div>
         </div>
 
-        {/* Certifications - now with mobile swiper */}
         <div className="mt-6 opacity-50 w-full flex justify-center">
           <CertificationsStrip />
         </div>
 
-        {/* Reviews - only show on desktop */}
         <div className="mt-6 opacity-80 hidden md:flex justify-center">
           <ReviewsStripCarousel />
         </div>
       </div>
     </div>
 
-    {/* BookingBarForm - only show on desktop */}
     <div className="hidden md:block">
       <BookingBarForm />
     </div>
-
-    {/* Floating Action Button - Mobile Only */}
-    <FloatingActionButton />
   </div>
 )
-
 
 export default HeroSection

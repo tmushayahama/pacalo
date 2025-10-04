@@ -23,7 +23,7 @@ const ServicesSection: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-20 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <section id="services" className="py-8 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
@@ -40,7 +40,7 @@ const ServicesSection: React.FC = () => {
             <ServiceCard key={index} {...service} />
           ))}
         </div>
-        <div className="mt-10 text-center">
+        <div className="mt-8 text-center">
           <Link to="/services" className="inline-block px-6 py-3 rounded-xl bg-pacalo-blue text-white font-bold hover:bg-blue-700 transition-colors">Learn more about our services</Link>
         </div>
       </div>
