@@ -52,7 +52,7 @@ const FloatingActionButton: React.FC = () => {
         />
       )}
 
-      <div className="fixed bottom-4 right-4 z-50 md:hidden">
+      <div className="fixed bottom-4 right-4 z-50 ">
         {/* Action buttons */}
         {isExpanded && (
           <div className="flex flex-col gap-3 mb-3 items-end">
