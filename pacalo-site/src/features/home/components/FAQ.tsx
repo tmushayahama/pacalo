@@ -14,6 +14,7 @@ interface AccordionItemProps {
 
 interface FAQProps {
   faqData?: FaqCategory[];
+  showHeader?: boolean;
 }
 
 const AccordionItem: React.FC<AccordionItemProps> = ({ question, answer, isOpen, onToggle }) => (
@@ -38,7 +39,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ question, answer, isOpen,
   </div>
 );
 
-const FAQ: React.FC<FAQProps> = ({ faqData }) => {
+const FAQ: React.FC<FAQProps> = ({ faqData, showHeader = true }) => {
   const [openIndex, setOpenIndex] = useState<string | null>(null);
 
   const faqItems = useMemo(
@@ -52,20 +53,20 @@ const FAQ: React.FC<FAQProps> = ({ faqData }) => {
   };
 
   return (
-    <section id="faq" className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4 max-w-4xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-xl text-gray-600">
-            Everything you need to know about our services
-          </p>
-        </div>
 
-        <div className="space-y-8">
+    <section id='faq'>
+      <div className='max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-4 sm:p-8'>
+
+        {showHeader && (
+          <div className={'mb-6'}>
+            <h1 className={'text-3xl font-bold text-gray-900 mb-2'}>Frequently Asked Questions</h1>
+            <p className="text-gray-600">Everything you need to know about our services</p>
+          </div>
+        )}
+
+        <div className="space-y-6">
           {faqItems.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="bg-white rounded-lg shadow-md p-6">
+            <div key={categoryIndex} className="rounded-lg shadow-md ">
               <h3 className="text-2xl font-bold text-pacalo-blue mb-4">
                 {category.category}
               </h3>

@@ -34,17 +34,15 @@ const Home: React.FC = () => {
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/40 to-black/35" />
-          <div className="relative container mx-auto px-4 py-12">
+          <div className="relative container mx-auto sm:p-8 p-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
               <div className="order-1">
-                <BookingForm compact />
+                <BookingForm />
               </div>
               <div className="order-2">
-                <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-xl ring-1 ring-gray-200 p-6 md:p-8">
-                  <FAQ />
-                  <div className="mt-4 text-right">
-                    <Link to="/faq" className="text-pacalo-blue font-semibold hover:underline">View all FAQs →</Link>
-                  </div>
+                <FAQ />
+                <div className="mt-4 text-right">
+                  <Link to="/faq" className="text-white font-semibold hover:underline">View all FAQs →</Link>
                 </div>
               </div>
 

@@ -25,7 +25,7 @@ const HighlightText: React.FC<HighlightTextProps> = ({ children }) => (
 const vans = GALLERY_IMAGES.filter(img => img.category === 'vehicle' || img.category === 'interior' || img.category === 'equipment')
 
 const HeroSection: React.FC = () => (
-  <div className="mt-16 md:mt-0">
+  <div className="">
     <div
       className="min-h-[60vh] md:min-h-[70vh] bg-cover bg-center relative flex items-center"
       style={{
@@ -65,7 +65,7 @@ const HeroSection: React.FC = () => (
         </div>
       </div>
 
-      <div className="relative z-10 w-full container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+      <div className="relative mt-16 z-10 w-full container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         <div className="max-w-4xl">
           <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl border border-white/20">
             <h1 className="text-gray-900 font-bold text-xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight mb-4">
@@ -107,7 +107,7 @@ const HeroSection: React.FC = () => (
               {/* Our Services button - hidden on mobile */}
               <a
                 href="#services"
-                className="hidden md:flex col-span-2 md:col-span-1 w-full items-center justify-center px-4 py-3 bg-white text-pacalo-blue font-bold rounded-xl border-2 border-pacalo-blue hover:bg-pacalo-blue hover:text-white transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="col-span-2 md:col-span-1 w-full hidden md:flex items-center justify-center px-4 py-3 bg-white text-pacalo-blue font-bold rounded-xl border-2 border-pacalo-blue hover:bg-pacalo-blue hover:text-white transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 <span>Our Services</span>
               </a>
@@ -116,12 +116,12 @@ const HeroSection: React.FC = () => (
         </div>
 
         {/* Certifications - now with mobile swiper */}
-        <div className="mt-6 opacity-50 w-full">
+        <div className="mt-6 opacity-50 w-full flex justify-center">
           <CertificationsStrip />
         </div>
 
         {/* Reviews - only show on desktop */}
-        <div className="mt-6 opacity-80 hidden md:block">
+        <div className="mt-6 opacity-80 hidden md:flex justify-center">
           <ReviewsStripCarousel />
         </div>
       </div>

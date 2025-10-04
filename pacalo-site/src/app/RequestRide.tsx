@@ -6,15 +6,14 @@ import { FaPhone, FaEnvelope, FaWhatsapp } from 'react-icons/fa'
 
 const RequestRidePage: React.FC = () => {
   return (
-    <div className="font-roboto bg-white overflow-x-hidden">
+    <div className="bg-gradient-to-r from-pacalo-blue/10 to-pacalo-gold/10 overflow-x-hidden">
       <Navigation />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Request a Ride</h1>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Request a Ride</h2>
           <p className="text-gray-600 mb-6">Tell us where you need to go—we'll handle the rest with safe, professional care.</p>
-          <div className="bg-white rounded-2xl shadow-xl ring-1 ring-gray-200 p-6 md:p-8">
-            <BookingForm />
-          </div>
+          <BookingForm />
+
 
           <div className="mt-8 bg-blue-50 border border-blue-100 rounded-2xl p-6 md:p-8">
             <h2 className="text-xl font-bold text-gray-900 mb-2">Prefer to talk?</h2>
