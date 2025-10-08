@@ -8,6 +8,7 @@ import 'swiper/swiper-bundle.css'
 import { GALLERY_IMAGES } from '../gallery/data/galleryData'
 import ReviewsStripCarousel from '../reviews/components/ReviewsStripCarousel'
 import { getAssetPath } from '../../utils/assets'
+import { CONTACT } from '@/@pacalo.core/data/constants'
 
 interface HighlightTextProps {
   children: React.ReactNode
@@ -95,7 +96,7 @@ const HeroSection: React.FC = () => (
 
             <div className="grid grid-cols-3 md:grid-cols-4 gap-3">
               <a
-                href="tel:3093074564"
+                href={`tel:${CONTACT.PHONE}`}
                 className="w-full flex items-center justify-center px-4 py-3 bg-pacalo-blue text-white font-bold rounded-xl hover:bg-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 <FaPhone className="w-4 h-4 mr-2 text-pacalo-gold" />
@@ -103,7 +104,7 @@ const HeroSection: React.FC = () => (
                 <span className="sm:hidden"> Call</span>
               </a>
               <a
-                href="https://wa.me/13093074564?text=Hello,%20I%20would%20like%20to%20book%20a%20medical%20transport%20service."
+                href={CONTACT.WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center px-4 py-3 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
@@ -113,7 +114,7 @@ const HeroSection: React.FC = () => (
                 <span className="sm:hidden">Chat</span>
               </a>
               <a
-                href="mailto:ride@pacalo.net"
+                href={`mailto:${CONTACT.EMAIL}`}
                 className="w-full flex items-center justify-center px-4 py-3 bg-pacalo-gold text-white font-bold rounded-xl hover:bg-yellow-600 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 <FaEnvelope className="w-4 h-4 mr-2" />

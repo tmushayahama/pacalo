@@ -2,6 +2,7 @@ import type React from 'react'
 import { FaEnvelope, FaPhone, FaStar, FaWhatsapp } from 'react-icons/fa'
 import { getAssetPath } from '../../utils/assets'
 import { Link } from 'react-router-dom'
+import { CONTACT } from '@/@pacalo.core/data/constants'
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
@@ -46,12 +47,12 @@ const Footer: React.FC = () => {
           <div className="text-center md:text-right">
             <h3 className="text-white font-bold text-xl lg:text-2xl mb-6">Contact Us</h3>
             <div className="space-y-4 text-gray-300">
-              <a href="tel:3093074564" className="flex items-center justify-center md:justify-end text-lg hover:text-pacalo-gold transition-colors">
+              <a href={`tel:${CONTACT.PHONE}`} className="flex items-center justify-center md:justify-end text-lg hover:text-pacalo-gold transition-colors">
                 <FaPhone className="mr-3" />
-                (309) 307-4564
+                {CONTACT.PHONE_FORMATTED}
               </a>
               <a
-                href="https://wa.me/13093074564?text=Hello,%20I%20would%20like%20to%20book%20a%20medical%20transport%20service."
+                href={CONTACT.WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center md:justify-end text-green-400 hover:text-green-300 transition-colors"
@@ -59,9 +60,9 @@ const Footer: React.FC = () => {
                 <FaWhatsapp className="mr-3" />
                 WhatsApp
               </a>
-              <a href="mailto:ride@pacalo.net" className="flex items-center justify-center md:justify-end text-lg hover:text-pacalo-gold transition-colors break-all">
+              <a href={`mailto:${CONTACT.EMAIL}`} className="flex items-center justify-center md:justify-end text-lg hover:text-pacalo-gold transition-colors break-all">
                 <FaEnvelope className="mr-3 flex-shrink-0" />
-                ride@pacalo.net
+                {CONTACT.EMAIL}
               </a>
               <div className="pt-4 flex justify-center md:justify-end">
                 <Link

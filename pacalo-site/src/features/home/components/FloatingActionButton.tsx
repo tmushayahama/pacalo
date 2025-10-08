@@ -2,6 +2,7 @@ import type React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaEnvelope, FaPhone, FaWhatsapp, FaCalendarAlt, FaTimes } from 'react-icons/fa';
+import { CONTACT } from '@/@pacalo.core/data/constants';
 
 const FloatingActionButton: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -11,21 +12,21 @@ const FloatingActionButton: React.FC = () => {
     {
       icon: FaPhone,
       label: 'Call Us',
-      href: 'tel:3093074564',
+      href: `tel:${CONTACT.PHONE}`,
       bgColor: 'bg-pacalo-blue',
       hoverColor: 'hover:bg-blue-700',
     },
     {
       icon: FaWhatsapp,
       label: 'WhatsApp',
-      href: 'https://wa.me/13093074564?text=Hello,%20I%20would%20like%20to%20book%20a%20medical%20transport%20service.',
+      href: CONTACT.WHATSAPP_URL,
       bgColor: 'bg-green-600',
       hoverColor: 'hover:bg-green-700',
     },
     {
       icon: FaEnvelope,
       label: 'Email',
-      href: 'mailto:ride@pacalo.net',
+      href: `mailto:${CONTACT.EMAIL}`,
       bgColor: 'bg-pacalo-gold',
       hoverColor: 'hover:bg-yellow-600',
     },

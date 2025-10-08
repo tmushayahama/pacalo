@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaPhone, FaEnvelope, FaClock, FaWhatsapp } from 'react-icons/fa';
+import { CONTACT } from '@/@pacalo.core/data/constants';
 
 const AboutUsSectionNew = () => {
   const partners = [
@@ -68,7 +69,7 @@ const AboutUsSectionNew = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
               <a
-                href="tel:3093074564"
+                href={`tel:${CONTACT.PHONE}`}
                 className="flex flex-row md:flex-col items-center md:justify-center p-5 bg-white/10 rounded-xl hover:bg-white/20 transition-all border border-white/10 md:text-center gap-4 md:gap-0"
               >
                 <div className="text-yellow-400 text-3xl md:mb-3 flex-shrink-0">
@@ -81,7 +82,7 @@ const AboutUsSectionNew = () => {
               </a>
 
               <a
-                href="https://wa.me/13093074564?text=Hello,%20I%20would%20like%20to%20book%20a%20medical%20transport%20service."
+                href={CONTACT.WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-row md:flex-col items-center md:justify-center p-5 bg-green-600/20 rounded-xl hover:bg-green-600/30 transition-all border border-green-500/30 md:text-center gap-4 md:gap-0"
@@ -96,7 +97,7 @@ const AboutUsSectionNew = () => {
               </a>
 
               <a
-                href="mailto:ride@pacalo.net"
+                href={`mailto:${CONTACT.EMAIL}`}
                 className="flex flex-row md:flex-col items-center md:justify-center p-5 bg-white/10 rounded-xl hover:bg-white/20 transition-all border border-white/10 md:text-center gap-4 md:gap-0"
               >
                 <div className="text-yellow-400 text-3xl md:mb-3 flex-shrink-0">
@@ -104,7 +105,7 @@ const AboutUsSectionNew = () => {
                 </div>
                 <div className="flex-1 md:flex-auto">
                   <span className="block text-xs text-gray-300 mb-2">Email Us</span>
-                  <span className="text-lg font-bold break-all">ride@pacalo.net</span>
+                  <span className="text-lg font-bold break-all">{CONTACT.EMAIL}</span>
                 </div>
               </a>
 

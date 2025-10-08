@@ -2,7 +2,8 @@ import type React from 'react'
 import { Navigation } from '@/features/home'
 import Footer from '@/features/home/Footer'
 import BookingForm from '@/features/home/components/BookingForm'
-import { FaPhone, FaEnvelope, FaWhatsapp } from 'react-icons/fa'
+import { FaPhone, FaWhatsapp, FaEnvelope } from 'react-icons/fa'
+import { CONTACT } from '@/@pacalo.core/data/constants'
 
 const RequestRidePage: React.FC = () => {
   return (
@@ -18,14 +19,14 @@ const RequestRidePage: React.FC = () => {
           <div className="mt-8 bg-blue-50 border border-blue-100 rounded-2xl p-6 md:p-8">
             <h2 className="text-xl font-bold text-gray-900 mb-2">Prefer to talk?</h2>
             <p className="text-gray-700 mb-4">We're available 24/7 for scheduling and questions.</p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a href="tel:3093074564" className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-pacalo-blue text-white font-bold hover:bg-blue-700">
-                <FaPhone /> Call (309) 307-4564
+            <div className="flex flex-wrap gap-4 justify-center">
+              <a href={`tel:${CONTACT.PHONE}`} className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-pacalo-blue text-white font-bold hover:bg-blue-700">
+                <FaPhone /> Call Now
               </a>
-              <a href="https://wa.me/13093074564?text=Hello,%20I%20would%20like%20to%20book%20a%20medical%20transport%20service." target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-green-600 text-white font-bold hover:bg-green-700">
+              <a href={CONTACT.WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-green-600 text-white font-bold hover:bg-green-700">
                 <FaWhatsapp /> WhatsApp
               </a>
-              <a href="mailto:ride@pacalo.net" className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-pacalo-gold text-white font-bold hover:bg-yellow-600">
+              <a href={`mailto:${CONTACT.EMAIL}`} className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-pacalo-gold text-white font-bold hover:bg-yellow-600">
                 <FaEnvelope /> Email
               </a>
             </div>

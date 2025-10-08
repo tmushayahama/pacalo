@@ -1,5 +1,6 @@
 import type React from 'react'
 import { Link } from 'react-router-dom'
+import { CONTACT } from '@/@pacalo.core/data/constants'
 
 const RequestRideCTA: React.FC<{ className?: string }> = ({ className = '' }) => {
   return (
@@ -12,7 +13,7 @@ const RequestRideCTA: React.FC<{ className?: string }> = ({ className = '' }) =>
           </div>
           <div className="flex gap-3">
             <Link to="/request-ride" className="px-6 py-3 rounded-xl bg-white text-pacalo-blue font-bold hover:bg-gray-100 transition-colors">Request a Ride</Link>
-            <a href="tel:3093074564" className="px-6 py-3 rounded-xl bg-pacalo-gold text-pacalo-blue font-bold hover:bg-yellow-500 transition-colors">Call (309) 307-4564</a>
+            <a href={`tel:${CONTACT.PHONE}`} className="px-6 py-3 rounded-xl bg-pacalo-gold text-pacalo-blue font-bold hover:bg-yellow-500 transition-colors">Call {CONTACT.PHONE_FORMATTED}</a>
           </div>
         </div>
       </div>

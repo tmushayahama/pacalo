@@ -2,7 +2,8 @@ import type React from 'react'
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { FaBars, FaTimes, FaPhone, FaWhatsapp, FaHome } from 'react-icons/fa'
-import { getAssetPath } from '@/utils/assets'
+import { getAssetPath } from '../../utils/assets'
+import { CONTACT } from '@/@pacalo.core/data/constants'
 
 interface NavigationItem {
   href: string
@@ -91,7 +92,7 @@ const Navigation: React.FC = () => {
             ))}
             <div className="flex items-center space-x-3">
               <a
-                href="https://wa.me/13093074564?text=Hello,%20I%20would%20like%20to%20book%20a%20medical%20transport%20service."
+                href={CONTACT.WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 px-5 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl font-bold hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
@@ -100,7 +101,7 @@ const Navigation: React.FC = () => {
                 <span className="text-sm">WhatsApp</span>
               </a>
               <a
-                href="tel:3093074564"
+                href={`tel:${CONTACT.PHONE}`}
                 className="flex items-center space-x-2 px-5 py-3 bg-gradient-to-r from-pacalo-blue to-blue-700 text-white rounded-xl font-bold hover:from-blue-700 hover:to-pacalo-blue transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 <FaPhone className="text-lg" />
@@ -144,7 +145,7 @@ const Navigation: React.FC = () => {
                 ))}
                 <div className="pt-4 mt-4 border-t border-gray-200 space-y-3">
                   <a
-                    href="https://wa.me/13093074564?text=Hello,%20I%20would%20like%20to%20book%20a%20medical%20transport%20service."
+                    href={CONTACT.WHATSAPP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center space-x-3 px-6 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl font-bold w-full transform hover:scale-105 transition-all duration-200 shadow-lg"
@@ -153,11 +154,11 @@ const Navigation: React.FC = () => {
                     <span className="text-lg">WhatsApp</span>
                   </a>
                   <a
-                    href="tel:3093074564"
+                    href={`tel:${CONTACT.PHONE}`}
                     className="flex items-center justify-center space-x-3 px-6 py-4 bg-gradient-to-r from-pacalo-blue to-blue-700 text-white rounded-xl font-bold w-full transform hover:scale-105 transition-all duration-200 shadow-lg"
                   >
                     <FaPhone className="text-lg" />
-                    <span className="text-lg">Call (309) 307-4564</span>
+                    <span className="text-lg">Call {CONTACT.PHONE_FORMATTED}</span>
                   </a>
                 </div>
               </div>
