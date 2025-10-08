@@ -1,6 +1,7 @@
 import type React from 'react'
-import { FaStar, FaWhatsapp } from 'react-icons/fa'
+import { FaEnvelope, FaPhone, FaStar, FaWhatsapp } from 'react-icons/fa'
 import { getAssetPath } from '../../utils/assets'
+import { Link } from 'react-router-dom'
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
@@ -43,36 +44,32 @@ const Footer: React.FC = () => {
 
           {/* Contact Info */}
           <div className="text-center md:text-right">
-            <h3 className="text-white font-bold text-xl lg:text-2xl mb-6">Contact Info</h3>
-            <div className="space-y-6 text-gray-300">
-              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-                <div className="text-sm text-gray-400 mb-2">Phone</div>
-                <a href="tel:3093074564" className="text-xl lg:text-2xl font-semibold hover:text-pacalo-gold transition-all duration-200 hover:scale-105 inline-block">
-                  (309) 307-4564
-                </a>
-              </div>
-              <div className="bg-green-600/10 rounded-2xl p-6 border border-green-500/20">
-                <div className="text-sm text-gray-400 mb-2">WhatsApp</div>
-                <a
-                  href="https://wa.me/13093074564?text=Hello,%20I%20would%20like%20to%20book%20a%20medical%20transport%20service."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center md:justify-end text-green-400 hover:text-green-300 transition-all duration-200 hover:scale-105 text-lg font-medium"
+            <h3 className="text-white font-bold text-xl lg:text-2xl mb-6">Contact Us</h3>
+            <div className="space-y-4 text-gray-300">
+              <a href="tel:3093074564" className="flex items-center justify-center md:justify-end text-lg hover:text-pacalo-gold transition-colors">
+                <FaPhone className="mr-3" />
+                (309) 307-4564
+              </a>
+              <a
+                href="https://wa.me/13093074564?text=Hello,%20I%20would%20like%20to%20book%20a%20medical%20transport%20service."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center md:justify-end text-green-400 hover:text-green-300 transition-colors"
+              >
+                <FaWhatsapp className="mr-3" />
+                WhatsApp
+              </a>
+              <a href="mailto:ride@pacalo.net" className="flex items-center justify-center md:justify-end text-lg hover:text-pacalo-gold transition-colors break-all">
+                <FaEnvelope className="mr-3 flex-shrink-0" />
+                ride@pacalo.net
+              </a>
+              <div className="pt-4 flex justify-center md:justify-end">
+                <Link
+                  to="/request-ride"
+                  className="inline-block px-6 py-3 bg-pacalo-gold hover:bg-yellow-500 text-pacalo-blue font-bold rounded-lg transition-colors"
                 >
-                  <FaWhatsapp className="mr-2" />
-                  Message Us
-                </a>
-              </div>
-              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-                <div className="text-sm text-gray-400 mb-2">Email</div>
-                <a href="mailto:ride@pacalo.net" className="hover:text-pacalo-gold transition-all duration-200 break-all text-lg font-medium hover:scale-105 inline-block">
-                  ride@pacalo.net
-                </a>
-              </div>
-              <div className="bg-gradient-to-br from-pacalo-gold/20 to-yellow-400/20 rounded-2xl p-6 border border-pacalo-gold/30">
-                <div className="text-sm text-gray-400 mb-2">Available</div>
-                <div className="text-pacalo-gold font-bold text-xl">24/7 Service</div>
-                <div className="text-sm text-gray-400 mt-1">Monday - Sunday</div>
+                  Request a Ride
+                </Link>
               </div>
             </div>
           </div>
