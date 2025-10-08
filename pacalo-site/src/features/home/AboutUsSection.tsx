@@ -1,12 +1,13 @@
 import React from 'react';
 import { FaPhone, FaEnvelope, FaClock, FaWhatsapp } from 'react-icons/fa';
 import { CONTACT } from '@/@pacalo.core/data/constants';
+import { getAssetPath } from '@/utils/assets';
 
 const AboutUsSectionNew = () => {
   const partners = [
-    { name: 'Fresenius Kidney Care', logo: '/assets/images/logos/fraseneus.png', url: 'https://www.freseniuskidneycare.com/' },
-    { name: 'NetSpap', logo: '/assets/images/logos/netspap-bw.png', url: 'https://netspap.com/' },
-    { name: 'OSF Healthcare', logo: '/assets/images/logos/osf.png', url: 'https://www.osfhealthcare.org/' }
+    { name: 'Fresenius Kidney Care', logo: getAssetPath('/assets/images/logos/fraseneus.png'), url: 'https://www.freseniuskidneycare.com/' },
+    { name: 'NetSpap', logo: getAssetPath('/assets/images/logos/netspap-bw.png'), url: 'https://netspap.com/' },
+    { name: 'OSF Healthcare', logo: getAssetPath('/assets/images/logos/osf.png'), url: 'https://www.osfhealthcare.org/' }
   ];
 
   return (
