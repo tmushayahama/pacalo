@@ -15,45 +15,15 @@ export const GALLERY_IMAGES: GalleryImage[] = [
     category: 'vehicle'
   },
   {
-    src: getAssetPath('/assets/images/vans/van_side.jpg'),
-    title: 'Side View of Transport Vehicle',
-    description: 'Clean, professional appearance with easy access doors for wheelchair and stretcher loading.',
-    category: 'vehicle'
-  },
-  {
     src: getAssetPath('/assets/images/vans/van_outside_house.png'),
     title: 'Home Pickup Service',
     description: 'We provide convenient door-to-door service, picking up patients directly from their homes.',
     category: 'vehicle'
   },
   {
-    src: getAssetPath('/assets/images/vans/wheelchair_van.png'),
-    title: 'Wheelchair Accessible Vehicle',
-    description: 'Specially designed van with wheelchair lift and securement system for safe transport.',
-    category: 'vehicle'
-  },
-  {
-    src: getAssetPath('/assets/images/vans/inside_stretcher.png'),
-    title: 'Spacious Interior Layout',
-    description: 'Roomy interior designed for patient comfort with proper ventilation and lighting.',
-    category: 'interior'
-  },
-  {
-    src: getAssetPath('/assets/images/vans/loaded_stretcher.jpg'),
-    title: 'Stretcher Transport Setup',
-    description: 'Professional stretcher securement system ensuring patient safety during transport.',
-    category: 'equipment'
-  },
-  {
     src: getAssetPath('/assets/images/vans/securement_system.jpg'),
     title: 'Advanced Securement System',
     description: 'State-of-the-art wheelchair and stretcher securement technology for maximum safety.',
-    category: 'equipment'
-  },
-  {
-    src: getAssetPath('/assets/images/vans/stretcher_can.jpg'),
-    title: 'Medical Equipment Storage',
-    description: 'Organized storage solutions for medical equipment and patient care supplies.',
     category: 'equipment'
   },
   {

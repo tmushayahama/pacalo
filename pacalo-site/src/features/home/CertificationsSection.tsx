@@ -1,5 +1,6 @@
 import type React from 'react'
 import { getAssetPath } from '../../utils/assets'
+import { Link } from 'react-router-dom'
 
 const CertificationsSection: React.FC = () => {
   const certifications = [
@@ -29,7 +30,7 @@ const CertificationsSection: React.FC = () => {
       className: "h-20 w-20",
       content: (
         <p className="leading-relaxed">
-          Our team includes <strong>highly trained EMTs (Emergency Medical Technicians)</strong> skilled in administering oxygen and life-saving medications, ensuring expert care throughout your journey.
+          <strong>Our licensed EMTs</strong> ensure safe, compassionate non-emergency transportation, leveraging their expertise in patient care and medical support for your peace of mind.
         </p>
       )
     },
@@ -50,7 +51,7 @@ const CertificationsSection: React.FC = () => {
       <div className="mx-auto max-w-6xl px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Certifications & Qualifications
+            Professional Credentials
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Trusted certifications that set us apart in medical transportation
@@ -77,7 +78,11 @@ const CertificationsSection: React.FC = () => {
             </div>
           ))}
         </div>
+        <div className="mt-6">
+          <Link to="/certifications" className="inline-block px-6 py-3 rounded-xl bg-pacalo-blue text-white font-bold hover:bg-blue-700 transition-colors">See our certifications</Link>
+        </div>
       </div>
+
     </section>
   )
 }
