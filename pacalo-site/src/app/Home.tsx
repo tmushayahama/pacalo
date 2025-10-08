@@ -14,6 +14,7 @@ import { FaPhone, FaEnvelope, FaWhatsapp } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import CertificationsSection from '@/features/home/CertificationsSection'
 import FloatingActionButton from '@/features/home/components/FloatingActionButton'
+import ReviewsCarousel from '@/features/reviews/components/ReviewsCarousel'
 
 const Home: React.FC = () => {
   return (
@@ -25,6 +26,7 @@ const Home: React.FC = () => {
         <ServicesSection />
         <WhyChooseUsSection />
         <CertificationsSection />
+        <ReviewsCarousel />
         <section className="relative">
           <div
             className="absolute inset-0 bg-cover bg-center"
