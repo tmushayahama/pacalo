@@ -1,6 +1,7 @@
 import type React from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { TextField, Select, MenuItem, FormControl, InputLabel, Button, FormHelperText } from '@mui/material';
+import { BOOKING_FORM_CONFIG } from '../../../@pacalo.core/data/constants';
 
 interface FormData {
   name: string;
@@ -33,25 +34,29 @@ const BookingForm: React.FC = () => {
   });
 
   const onSubmit = (data: FormData) => {
+    // Since email field is not available in the new form,
+    // we'll include it in the notes section
+    const additionalInfo = [];
+    if (data.email) additionalInfo.push(`Email: ${data.email}`);
+    if (data.notes) additionalInfo.push(`Additional Notes: ${data.notes}`);
 
-    const baseUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSddx-qvBYH3510NjFk7Gfc-Tyaky0fYodpijBwZKbNW0AkL6g/viewform';
+    const combinedNotes = additionalInfo.join(' | ');
+
     const params = new URLSearchParams({
       'usp': 'pp_url',
-      'entry.2108770155': data.name,
-      'entry.1749960224': data.phone,
-      'entry.849742422': data.preferredContact,
-      'entry.2135550456': data.pickupAddress,
-      'entry.1308337288': data.dropoffAddress,
-      'entry.1303329773': data.datetime,
-      'entry.363934079': data.serviceType,
-      'entry.337262364': data.returnTrip,
-      'entry.1117024967': data.notes
+      [BOOKING_FORM_CONFIG.ENTRIES.NAME]: data.name,
+      [BOOKING_FORM_CONFIG.ENTRIES.PHONE]: data.phone,
+      [BOOKING_FORM_CONFIG.ENTRIES.PREFERRED_CONTACT]: data.preferredContact,
+      [BOOKING_FORM_CONFIG.ENTRIES.PICKUP_ADDRESS]: data.pickupAddress,
+      [BOOKING_FORM_CONFIG.ENTRIES.DROPOFF_ADDRESS]: data.dropoffAddress,
+      [BOOKING_FORM_CONFIG.ENTRIES.DATETIME]: data.datetime,
+      [BOOKING_FORM_CONFIG.ENTRIES.SERVICE_TYPE]: data.serviceType,
+      [BOOKING_FORM_CONFIG.ENTRIES.RETURN_TRIP]: data.returnTrip,
+      [BOOKING_FORM_CONFIG.ENTRIES.NOTES]: combinedNotes
     });
 
-    window.open(`${baseUrl}?${params.toString()}`, '_blank');
-  };
-
-  return (
+    window.open(`${BOOKING_FORM_CONFIG.BASE_URL}?${params.toString()}`, '_blank');
+  }; return (
     <div className='max-w-3xl mx-auto bg-white rounded-2xl shadow-lg  p-4 sm:p-8'>
       <div className='mb-6'>
         <h1 className='text-3xl font-bold text-gray-900 mb-2'>Request a Ride</h1>

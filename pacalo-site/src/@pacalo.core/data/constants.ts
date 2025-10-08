@@ -8,3 +8,6 @@ export const CONTACT = {
 export const SITE_CONFIG = {
   WRITE_REVIEW_HREF: "https://g.page/r/CfW0pd4CwkDbEAE/review",
 }
+
+// Re-export booking form configuration for convenience
+export { BOOKING_FORM_CONFIG } from './bookingConstants';

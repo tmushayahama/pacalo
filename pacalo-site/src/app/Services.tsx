@@ -23,7 +23,7 @@ const ServicesPage: React.FC = () => {
             <div className="rounded-2xl bg-blue-50 border border-blue-100 p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="text-gray-800">
                 <h2 className="text-xl md:text-2xl font-bold">Ready to request a ride?</h2>
-                <p className="text-gray-600">Book now and we’ll get you there safely and on time.</p>
+                <p className="text-gray-600">Book now and we'll get you there safely and on time.</p>
               </div>
               <Link to="/request-ride" className="px-6 py-3 rounded-xl bg-pacalo-blue text-white font-bold hover:bg-blue-700 transition-colors">Request a Ride</Link>
             </div>

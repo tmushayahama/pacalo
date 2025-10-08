@@ -13,7 +13,7 @@ export interface ErrorStateProps {
 
 const ErrorState: React.FC<ErrorStateProps> = ({
   title = "Oops! Something went wrong",
-  message = "We couldn’t load your content.",
+  message = "We couldn't load your content.",
   emoji = "😞",
   retryLabel = "Try Again",
   onRetry,

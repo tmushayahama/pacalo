@@ -1,6 +1,7 @@
 import type React from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { TextField, Select, MenuItem, FormControl, InputLabel, Button, FormHelperText } from '@mui/material';
+import { BOOKING_FORM_CONFIG } from '../../../@pacalo.core/data/constants';
 
 type FormData = {
   pickupAddress: string;
@@ -19,14 +20,13 @@ const BookingBar: React.FC = () => {
 
   // == YOUR ORIGINAL SUBMIT FLOW ==
   const onSubmit = (data: FormData) => {
-    const baseUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSddx-qvBYH3510NjFk7Gfc-Tyaky0fYodpijBwZKbNW0AkL6g/viewform';
     const params = new URLSearchParams({
       usp: 'pp_url',
-      'entry.2135550456': data.pickupAddress, // Pickup Address
-      'entry.1303329773': data.datetime,      // DateTime
-      'entry.363934079': data.serviceType,    // Service Type
+      [BOOKING_FORM_CONFIG.ENTRIES.PICKUP_ADDRESS]: data.pickupAddress, // Pickup Address
+      [BOOKING_FORM_CONFIG.ENTRIES.DATETIME]: data.datetime,           // DateTime
+      [BOOKING_FORM_CONFIG.ENTRIES.SERVICE_TYPE]: data.serviceType,    // Service Type
     });
-    window.open(`${baseUrl}?${params.toString()}`, '_blank');
+    window.open(`${BOOKING_FORM_CONFIG.BASE_URL}?${params.toString()}`, '_blank');
   };
 
   return (
